@@ -1,0 +1,194 @@
+# ============================================================
+# VADE — Flutter Application
+# Git Ignore Configuration
+# ============================================================
+
+
+# ------------------------------------------------------------
+# Dart & Flutter
+# ------------------------------------------------------------
+
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+.pub-credentials.json
+build/
+coverage/
+
+# Generated documentation
+doc/api/
+
+# Flutter generated files
+**/flutter/ephemeral/
+**/Flutter/ephemeral/
+
+# Symbolication files
+app.*.symbols
+
+# Obfuscation maps
+app.*.map.json
+
+
+# ------------------------------------------------------------
+# Android
+# ------------------------------------------------------------
+
+**/android/.gradle/
+**/android/.kotlin/
+**/android/**/.cxx/
+**/android/**/.externalNativeBuild/
+**/android/captures/
+**/android/local.properties
+**/android/key.properties
+
+*.jks
+*.keystore
+
+# Android build artifacts
+*.apk
+*.aab
+*.ap_
+
+
+# ------------------------------------------------------------
+# iOS & Xcode
+# ------------------------------------------------------------
+
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+
+# Xcode user settings
+**/*.xcuserstate
+**/xcuserdata/
+**/.DS_Store
+
+# Xcode build artifacts
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+**/Pods/
+
+
+# ------------------------------------------------------------
+# IDE & Editors
+# ------------------------------------------------------------
+
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code — keep shared workspace settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+
+# ------------------------------------------------------------
+# Environment & Secrets
+# ------------------------------------------------------------
+
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+*.pem
+*.p12
+*.p8
+*.mobileprovision
+
+# Firebase private credentials
+service-account*.json
+firebase-adminsdk*.json
+*-firebase-adminsdk-*.json
+
+# Signing credentials
+*.asc
+*.gpg
+
+
+# ------------------------------------------------------------
+# Logs & Temporary Files
+# ------------------------------------------------------------
+
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+tmp/
+temp/
+.cache/
+
+
+# ------------------------------------------------------------
+# Operating Systems
+# ------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+
+# ------------------------------------------------------------
+# Testing
+# ------------------------------------------------------------
+
+test/coverage/
+*.lcov
+
+
+# ------------------------------------------------------------
+# Generated Files
+# ------------------------------------------------------------
+
+*.freezed.dart
+*.g.dart
+*.gr.dart
+*.mocks.dart
+
+
+# ------------------------------------------------------------
+# Local Configuration
+# ------------------------------------------------------------
+
+*.local
+*.local.json
+
+# Private configuration files
+config/secrets/
+secrets/
+
+
+# ============================================================
+# END — VADE
+# ============================================================
