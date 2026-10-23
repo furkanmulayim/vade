@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import '../../../../app/router/app_router.dart';
 import '../../../../core/constants/locale_keys.g.dart';
 import '../../../../core/extensions/context_extension.dart';
-import '../../../../core/theme/typo.dart';
 
 @RoutePage()
 class SplashPage extends StatefulWidget {
@@ -53,7 +52,10 @@ class _SplashPageState extends State<SplashPage> {
             const SizedBox(height: 16),
             Text(
               LocaleKeys.name.tr(),
-              style: context.size27(w: 600, color: context.color.onPrimary),
+              style: context.typo.size24(
+                color: context.color.onPrimary,
+                weight: .w700,
+              ),
             ),
           ],
         ),

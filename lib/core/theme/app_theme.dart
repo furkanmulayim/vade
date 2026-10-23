@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
+import 'app_typography.dart';
 import 'fixed_colors.dart';
 
 class AppTheme {
@@ -61,64 +62,23 @@ class AppTheme {
           shadow: colors.shadow,
           scrim: Colors.black,
         );
-    final baseTextTheme =
-        Typography.material2021(
-          platform: TargetPlatform.iOS,
-          colorScheme: scheme,
-        ).black.apply(
-          bodyColor: colors.textPrimary,
-          displayColor: colors.textPrimary,
-          decorationColor: colors.textPrimary,
-        );
-    final textTheme = baseTextTheme.copyWith(
-      headlineSmall: baseTextTheme.headlineSmall?.copyWith(
-        fontSize: 24,
-        height: 1.2,
-        fontWeight: FontWeight.w600,
-        letterSpacing: -0.35,
-      ),
-      titleLarge: baseTextTheme.titleLarge?.copyWith(
-        fontSize: 20,
-        height: 1.25,
-        fontWeight: FontWeight.w600,
-        letterSpacing: -0.2,
-      ),
-      titleMedium: baseTextTheme.titleMedium?.copyWith(
-        fontSize: 16,
-        height: 1.3,
-        fontWeight: FontWeight.w600,
-      ),
-      titleSmall: baseTextTheme.titleSmall?.copyWith(
-        fontSize: 14,
-        height: 1.3,
-        fontWeight: FontWeight.w600,
-      ),
-      bodyLarge: baseTextTheme.bodyLarge?.copyWith(
-        fontSize: 16,
-        height: 1.45,
-        fontWeight: FontWeight.w400,
-      ),
-      bodyMedium: baseTextTheme.bodyMedium?.copyWith(
-        fontSize: 14,
-        height: 1.4,
-        fontWeight: FontWeight.w400,
-      ),
-      bodySmall: baseTextTheme.bodySmall?.copyWith(
-        fontSize: 12,
-        height: 1.35,
-        color: colors.textSecondary,
-        fontWeight: FontWeight.w400,
-      ),
-      labelLarge: baseTextTheme.labelLarge?.copyWith(
-        fontSize: 14,
-        height: 1.2,
-        fontWeight: FontWeight.w600,
-      ),
-      labelMedium: baseTextTheme.labelMedium?.copyWith(
-        fontSize: 12,
-        height: 1.2,
-        fontWeight: FontWeight.w500,
-      ),
+    final typo = AppTypography(colors);
+    final textTheme = TextTheme(
+      displayLarge: typo.size28(),
+      displayMedium: typo.size27(),
+      displaySmall: typo.size26(),
+      headlineLarge: typo.size25(),
+      headlineMedium: typo.size24(),
+      headlineSmall: typo.size22(),
+      titleLarge: typo.size20(),
+      titleMedium: typo.size18(),
+      titleSmall: typo.size16(),
+      bodyLarge: typo.size16(),
+      bodyMedium: typo.size14(),
+      bodySmall: typo.size12(color: colors.textSecondary),
+      labelLarge: typo.size14(),
+      labelMedium: typo.size13(),
+      labelSmall: typo.size12(),
     );
     final rounded = RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(_radius),
@@ -158,7 +118,7 @@ class AppTheme {
         centerTitle: false,
         toolbarHeight: 60,
         iconTheme: IconThemeData(color: colors.iconPrimary, size: 22),
-        titleTextStyle: textTheme.headlineSmall,
+        titleTextStyle: typo.size18(),
       ),
       cardTheme: CardThemeData(
         color: colors.cardBack,

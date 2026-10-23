@@ -3,7 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/locale_keys.g.dart';
-import '../../../../core/theme/typo.dart';
+import '../../../../core/extensions/context_extension.dart';
 
 @RoutePage()
 class HomePage extends StatelessWidget {
@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       child: Center(
         child: Text(
           LocaleKeys.home_welcome.tr(),
-          style: context.size27(w: 600),
+          style: context.typo.size24(weight: .w500),
           textAlign: TextAlign.center,
         ),
       ),
