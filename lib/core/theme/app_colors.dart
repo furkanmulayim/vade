@@ -7,36 +7,25 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.primary,
     required this.onPrimary,
     required this.surface,
-    required this.cardFront,
-    required this.cardBack,
+    required this.card,
     required this.textPrimary,
     required this.textSecondary,
-    required this.iconPrimary,
-    required this.iconSecondary,
     required this.border,
-    required this.disabled,
-    required this.shadow,
   });
   final Color primary;
   final Color onPrimary;
   final Color surface;
-  final Color cardFront;
-  final Color cardBack;
+  final Color card;
   final Color textPrimary;
   final Color textSecondary;
-  final Color iconPrimary;
-  final Color iconSecondary;
   final Color border;
-  final Color disabled;
-  final Color shadow;
 
   @override
   AppColors copyWith({
     Color? primary,
     Color? onPrimary,
     Color? surface,
-    Color? cardFront,
-    Color? cardBack,
+    Color? card,
     Color? textPrimary,
     Color? textSecondary,
     Color? iconPrimary,
@@ -48,15 +37,10 @@ class AppColors extends ThemeExtension<AppColors> {
     primary: primary ?? this.primary,
     onPrimary: onPrimary ?? this.onPrimary,
     surface: surface ?? this.surface,
-    cardFront: cardFront ?? this.cardFront,
-    cardBack: cardBack ?? this.cardBack,
+    card: card ?? this.card,
     textPrimary: textPrimary ?? this.textPrimary,
     textSecondary: textSecondary ?? this.textSecondary,
-    iconPrimary: iconPrimary ?? this.iconPrimary,
-    iconSecondary: iconSecondary ?? this.iconSecondary,
     border: border ?? this.border,
-    disabled: disabled ?? this.disabled,
-    shadow: shadow ?? this.shadow,
   );
 
   @override
@@ -66,15 +50,10 @@ class AppColors extends ThemeExtension<AppColors> {
       primary: Color.lerp(primary, other.primary, t)!,
       onPrimary: Color.lerp(onPrimary, other.onPrimary, t)!,
       surface: Color.lerp(surface, other.surface, t)!,
-      cardFront: Color.lerp(cardFront, other.cardFront, t)!,
-      cardBack: Color.lerp(cardBack, other.cardBack, t)!,
+      card: Color.lerp(card, other.card, t)!,
       textPrimary: Color.lerp(textPrimary, other.textPrimary, t)!,
       textSecondary: Color.lerp(textSecondary, other.textSecondary, t)!,
-      iconPrimary: Color.lerp(iconPrimary, other.iconPrimary, t)!,
-      iconSecondary: Color.lerp(iconSecondary, other.iconSecondary, t)!,
       border: Color.lerp(border, other.border, t)!,
-      disabled: Color.lerp(disabled, other.disabled, t)!,
-      shadow: Color.lerp(shadow, other.shadow, t)!,
     );
   }
 }
