@@ -1,28 +1,42 @@
 # Vade
 
-Vade, feature-based clean mimariyle oluşturulan bir Flutter uygulamasıdır.
-Yönlendirme için AutoRoute, çoklu dil desteği için Easy Localization kullanır.
+Vade, **feature-based clean architecture** yaklaşımıyla geliştirilen bir Flutter uygulamasıdır.
+
+> 🚧 **Geliştirme aşamasında**
+>
+> Proje henüz başlangıç aşamasındadır. Mimari yapı ve özellikler geliştirme sürecinde değişebilir.
+
+## Teknolojiler
+
+- **Flutter & Dart** — Uygulama geliştirme
+- **Clean Architecture** — Mimari yaklaşım
+- **AutoRoute** — Sayfa yönlendirme
+- **GetIt & Injectable** — Bağımlılık yönetimi
+- **Easy Localization** — Çoklu dil desteği
+- **Provider** — State management
 
 ## Başlangıç
+
+Bağımlılıkları yükleyip uygulamayı çalıştırın:
 
 ```bash
 flutter pub get
 flutter run
 ```
 
-```bash
-dart run build_runner build
-```
-
-## State management ve dependency injection
-
-Global UI state'i `core/providers/app_provider.dart` altında tutulur ve GetIt
-ile `core/di/injection.dart` içinde kayıt edilir. Yeni global bağımlılıkları
-`configureDependencies` fonksiyonuna ekleyin.
+Kod üretimi:
 
 ```bash
-dart run easy_localization:generate -S assets/translations -O lib/core/constants -o locale_keys.g.dart -f keys
+dart run build_runner build --delete-conflicting-outputs
 ```
+
+Çeviri dosyalarını üretme:
+
+```bash
+dart run easy_localization:generate -S assets/translations -O lib
+```
+
+## Test ve analiz
 
 ```bash
 flutter analyze
