@@ -36,6 +36,7 @@ class AppTheme {
       useMaterial3: true,
       brightness: Brightness.light,
       colorScheme: scheme,
+      extensions: [colors],
     );
   }
 
@@ -71,6 +72,7 @@ class AppTheme {
       useMaterial3: true,
       brightness: Brightness.dark,
       colorScheme: scheme,
+      extensions: [colors],
     );
   }
 }
