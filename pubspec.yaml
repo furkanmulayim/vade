@@ -14,6 +14,7 @@ dependencies:
   provider: ^6.1.5+1
   get_it: ^9.2.1
   google_fonts: ^9.0.0
+  flutter_svg: ^2.3.0
 
 dev_dependencies:
   flutter_test:
@@ -27,3 +28,4 @@ flutter:
 
   assets:
     - assets/translations/
+    - assets/images/svg/nav_icons/
