@@ -6,15 +6,15 @@ import '../../../../core/constants/locale_keys.g.dart';
 import '../../../../core/extensions/context_extension.dart';
 
 @RoutePage()
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class DocumentsView extends StatelessWidget {
+  const DocumentsView({super.key});
 
   @override
   Widget build(BuildContext context) => Scaffold(
     body: SafeArea(
       child: Center(
         child: Text(
-          LocaleKeys.home_welcome.tr(),
+          LocaleKeys.navigation_documents.tr(),
           style: context.typo.size24(weight: .w500),
           textAlign: TextAlign.center,
         ),

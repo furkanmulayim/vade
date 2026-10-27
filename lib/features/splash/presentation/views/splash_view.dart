@@ -9,14 +9,14 @@ import '../../../../core/constants/locale_keys.g.dart';
 import '../../../../core/extensions/context_extension.dart';
 
 @RoutePage()
-class SplashPage extends StatefulWidget {
-  const SplashPage({super.key});
+class SplashView extends StatefulWidget {
+  const SplashView({super.key});
 
   @override
-  State<SplashPage> createState() => _SplashPageState();
+  State<SplashView> createState() => _SplashViewState();
 }
 
-class _SplashPageState extends State<SplashPage> {
+class _SplashViewState extends State<SplashView> {
   Timer? _timer;
 
   @override
@@ -27,7 +27,7 @@ class _SplashPageState extends State<SplashPage> {
 
   void _openHome() {
     if (!mounted) return;
-    context.router.replace(const HomeRoute());
+    context.router.replace(const MainRoute());
   }
 
   @override
