@@ -24,6 +24,9 @@ abstract final class Palette {
   static const borderLight = Color(0xFFEFEFEF);
   static const borderDark = Color(0xFF363636);
 
+  static const disabledLight = Color(0xFFB4B4B4);
+  static const disabledDark = Color(0xFF4D4D4D);
+
   //Success
   static const successLight = Color(0xFF3DAE2B);
   static const successDark = Color(0xFF478C3C);
