@@ -11,6 +11,12 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.textPrimary,
     required this.textSecondary,
     required this.border,
+    required this.success,
+    required this.backSuccess,
+    required this.warning,
+    required this.backWarning,
+    required this.danger,
+    required this.backDanger,
   });
   final Color primary;
   final Color onPrimary;
@@ -19,6 +25,12 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color textPrimary;
   final Color textSecondary;
   final Color border;
+  final Color success;
+  final Color backSuccess;
+  final Color warning;
+  final Color backWarning;
+  final Color danger;
+  final Color backDanger;
 
   @override
   AppColors copyWith({
@@ -33,6 +45,12 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? border,
     Color? disabled,
     Color? shadow,
+    Color? success,
+    Color? backSuccess,
+    Color? warning,
+    Color? backWarning,
+    Color? danger,
+    Color? backDanger,
   }) => AppColors(
     primary: primary ?? this.primary,
     onPrimary: onPrimary ?? this.onPrimary,
@@ -41,6 +59,12 @@ class AppColors extends ThemeExtension<AppColors> {
     textPrimary: textPrimary ?? this.textPrimary,
     textSecondary: textSecondary ?? this.textSecondary,
     border: border ?? this.border,
+    success: success ?? this.success,
+    backSuccess: backSuccess ?? this.backSuccess,
+    warning: warning ?? this.warning,
+    backWarning: backWarning ?? this.backWarning,
+    danger: danger ?? this.danger,
+    backDanger: backDanger ?? this.backDanger,
   );
 
   @override
@@ -54,6 +78,12 @@ class AppColors extends ThemeExtension<AppColors> {
       textPrimary: Color.lerp(textPrimary, other.textPrimary, t)!,
       textSecondary: Color.lerp(textSecondary, other.textSecondary, t)!,
       border: Color.lerp(border, other.border, t)!,
+      success: Color.lerp(success, other.success, t)!,
+      backSuccess: Color.lerp(backSuccess, other.backSuccess, t)!,
+      warning: Color.lerp(warning, other.warning, t)!,
+      backWarning: Color.lerp(backWarning, other.backWarning, t)!,
+      danger: Color.lerp(danger, other.danger, t)!,
+      backDanger: Color.lerp(backDanger, other.backDanger, t)!,
     );
   }
 }

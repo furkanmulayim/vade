@@ -13,6 +13,12 @@ class AppTheme {
       textPrimary: FixedColors.textPrimaryLight,
       textSecondary: FixedColors.textSecondaryLight,
       border: FixedColors.borderLight,
+      success: FixedColors.successLight,
+      backSuccess: FixedColors.successBackLight,
+      warning: FixedColors.warningLight,
+      backWarning: FixedColors.warningBackLight,
+      danger: FixedColors.dangerLight,
+      backDanger: FixedColors.dangerBackLight,
     );
     final scheme =
         ColorScheme.fromSeed(
@@ -49,6 +55,12 @@ class AppTheme {
       textPrimary: FixedColors.textPrimaryDark,
       textSecondary: FixedColors.textSecondaryDark,
       border: FixedColors.borderDark,
+      success: FixedColors.successDark,
+      backSuccess: FixedColors.successBackDark,
+      warning: FixedColors.warningDark,
+      backWarning: FixedColors.warningBackDark,
+      danger: FixedColors.dangerDark,
+      backDanger: FixedColors.dangerBackDark,
     );
     final scheme =
         ColorScheme.fromSeed(
