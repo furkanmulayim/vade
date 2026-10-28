@@ -1,1 +1,11 @@
-{"name":"Vade","home_welcome":"Welcome to Vade","navigation_home":"Home","navigation_categories":"Categories","navigation_create":"Create","navigation_documents":"Documents","navigation_settings":"Settings"}
+{
+    "name": "Vade",
+    "home_welcome": "Welcome to Vade",
+    "navigation_home": "Home",
+    "navigation_categories": "Categories",
+    "navigation_create": "Create",
+    "navigation_documents": "Documents",
+    "navigation_settings": "Settings",
+    "home_search": "Search",
+    "home_notifications": "Notifications"
+}

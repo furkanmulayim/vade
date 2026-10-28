@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-import 'app_colors.dart';
+import 'palette_colors_extension.dart';
 
 /// Urbanist, w500 ve temanın ana metin rengiyle 12–28 arası stiller.
-class AppTypography {
-  const AppTypography(this._colors);
+class TextStyles {
+  const TextStyles(this._colors);
 
-  final AppColors _colors;
+  final PaletteColorsExtension _colors;
 
   TextStyle _style(double size, {Color? color, FontWeight? weight}) {
-    return GoogleFonts.urbanist(
+    return TextStyle(
+      fontFamily: 'Urbanist',
       fontSize: size,
       fontWeight: weight ?? FontWeight.w500,
       fontStyle: FontStyle.normal,
