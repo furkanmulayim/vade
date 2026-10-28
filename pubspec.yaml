@@ -13,7 +13,6 @@ dependencies:
   easy_localization: ^3.0.8
   provider: ^6.1.5+1
   get_it: ^9.2.1
-  google_fonts: ^9.0.0
   flutter_svg: ^2.3.0
 
 dev_dependencies:
@@ -26,6 +25,14 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+  fonts:
+    - family: Urbanist
+      fonts:
+        - asset: assets/fonts/urbanist/Urbanist-Variable.ttf
+        - asset: assets/fonts/urbanist/Urbanist-Italic-Variable.ttf
+          style: italic
+
   assets:
     - assets/translations/
     - assets/images/svg/nav_icons/
+    - assets/images/svg/icons/

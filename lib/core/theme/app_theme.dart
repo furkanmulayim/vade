@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 
-import 'app_colors.dart';
-import 'fixed_colors.dart';
+import 'palette.dart';
+import 'palette_colors_extension.dart';
+import 'widget_themes.dart';
 
 class AppTheme {
   static ThemeData get light {
-    const colors = AppColors(
-      primary: FixedColors.primary,
-      onPrimary: FixedColors.onPrimary,
-      surface: FixedColors.surfaceLight,
-      card: FixedColors.cardLight,
-      textPrimary: FixedColors.textPrimaryLight,
-      textSecondary: FixedColors.textSecondaryLight,
-      border: FixedColors.borderLight,
-      success: FixedColors.successLight,
-      backSuccess: FixedColors.successBackLight,
-      warning: FixedColors.warningLight,
-      backWarning: FixedColors.warningBackLight,
-      danger: FixedColors.dangerLight,
-      backDanger: FixedColors.dangerBackLight,
+    const colors = PaletteColorsExtension(
+      primary: Palette.primary,
+      onPrimary: Palette.onPrimary,
+      surface: Palette.surfaceLight,
+      card: Palette.cardLight,
+      textPrimary: Palette.textPrimaryLight,
+      textSecondary: Palette.textSecondaryLight,
+      border: Palette.borderLight,
+      success: Palette.successLight,
+      backSuccess: Palette.successBackLight,
+      warning: Palette.warningLight,
+      backWarning: Palette.warningBackLight,
+      danger: Palette.dangerLight,
+      backDanger: Palette.dangerBackLight,
     );
     final scheme =
         ColorScheme.fromSeed(
@@ -40,27 +41,30 @@ class AppTheme {
         );
     return ThemeData(
       useMaterial3: true,
+      fontFamily: 'Urbanist',
+      textTheme: WidgetThemes.textTheme(colors),
       brightness: Brightness.light,
       colorScheme: scheme,
+      appBarTheme: WidgetThemes.appBar(colors),
       extensions: [colors],
     );
   }
 
   static ThemeData get dark {
-    const colors = AppColors(
-      primary: FixedColors.primary,
-      onPrimary: FixedColors.onPrimary,
-      surface: FixedColors.surfaceDark,
-      card: FixedColors.cardDark,
-      textPrimary: FixedColors.textPrimaryDark,
-      textSecondary: FixedColors.textSecondaryDark,
-      border: FixedColors.borderDark,
-      success: FixedColors.successDark,
-      backSuccess: FixedColors.successBackDark,
-      warning: FixedColors.warningDark,
-      backWarning: FixedColors.warningBackDark,
-      danger: FixedColors.dangerDark,
-      backDanger: FixedColors.dangerBackDark,
+    const colors = PaletteColorsExtension(
+      primary: Palette.primary,
+      onPrimary: Palette.onPrimary,
+      surface: Palette.surfaceDark,
+      card: Palette.cardDark,
+      textPrimary: Palette.textPrimaryDark,
+      textSecondary: Palette.textSecondaryDark,
+      border: Palette.borderDark,
+      success: Palette.successDark,
+      backSuccess: Palette.successBackDark,
+      warning: Palette.warningDark,
+      backWarning: Palette.warningBackDark,
+      danger: Palette.dangerDark,
+      backDanger: Palette.dangerBackDark,
     );
     final scheme =
         ColorScheme.fromSeed(
@@ -82,8 +86,11 @@ class AppTheme {
         );
     return ThemeData(
       useMaterial3: true,
+      fontFamily: 'Urbanist',
+      textTheme: WidgetThemes.textTheme(colors),
       brightness: Brightness.dark,
       colorScheme: scheme,
+      appBarTheme: WidgetThemes.appBar(colors),
       extensions: [colors],
     );
   }

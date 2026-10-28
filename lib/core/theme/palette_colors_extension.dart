@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-/// Bebiva ile birebir aynı semantic renk sözleşmesi.
 @immutable
-class AppColors extends ThemeExtension<AppColors> {
-  const AppColors({
+class PaletteColorsExtension extends ThemeExtension<PaletteColorsExtension> {
+  const PaletteColorsExtension({
     required this.primary,
     required this.onPrimary,
     required this.surface,
@@ -33,7 +32,7 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color backDanger;
 
   @override
-  AppColors copyWith({
+  PaletteColorsExtension copyWith({
     Color? primary,
     Color? onPrimary,
     Color? surface,
@@ -51,7 +50,7 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? backWarning,
     Color? danger,
     Color? backDanger,
-  }) => AppColors(
+  }) => PaletteColorsExtension(
     primary: primary ?? this.primary,
     onPrimary: onPrimary ?? this.onPrimary,
     surface: surface ?? this.surface,
@@ -68,9 +67,12 @@ class AppColors extends ThemeExtension<AppColors> {
   );
 
   @override
-  AppColors lerp(covariant AppColors? other, double t) {
+  PaletteColorsExtension lerp(
+    covariant PaletteColorsExtension? other,
+    double t,
+  ) {
     if (other == null) return this;
-    return AppColors(
+    return PaletteColorsExtension(
       primary: Color.lerp(primary, other.primary, t)!,
       onPrimary: Color.lerp(onPrimary, other.onPrimary, t)!,
       surface: Color.lerp(surface, other.surface, t)!,

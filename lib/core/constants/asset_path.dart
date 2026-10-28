@@ -1,4 +1,10 @@
 abstract final class AssetPath {
+  //Icons
+  static const _icons = 'assets/images/svg/icons';
+
+  static const search = '$_icons/search.svg';
+  static const notification = '$_icons/notification.svg';
+
   // Navigation Icons
   static const _navIcons = 'assets/images/svg/nav_icons';
 
