@@ -15,7 +15,7 @@ class TextStyles {
       fontWeight: weight ?? FontWeight.w500,
       fontStyle: FontStyle.normal,
       color: color ?? _colors.textPrimary,
-      height: 1,
+      height: 0,
       letterSpacing: 0,
     );
   }

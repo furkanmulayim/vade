@@ -10,6 +10,7 @@ class PaletteColorsExtension extends ThemeExtension<PaletteColorsExtension> {
     required this.textPrimary,
     required this.textSecondary,
     required this.border,
+    required this.disabled,
     required this.success,
     required this.backSuccess,
     required this.warning,
@@ -24,6 +25,7 @@ class PaletteColorsExtension extends ThemeExtension<PaletteColorsExtension> {
   final Color textPrimary;
   final Color textSecondary;
   final Color border;
+  final Color disabled;
   final Color success;
   final Color backSuccess;
   final Color warning;
@@ -58,6 +60,7 @@ class PaletteColorsExtension extends ThemeExtension<PaletteColorsExtension> {
     textPrimary: textPrimary ?? this.textPrimary,
     textSecondary: textSecondary ?? this.textSecondary,
     border: border ?? this.border,
+    disabled: disabled ?? this.disabled,
     success: success ?? this.success,
     backSuccess: backSuccess ?? this.backSuccess,
     warning: warning ?? this.warning,
@@ -80,6 +83,7 @@ class PaletteColorsExtension extends ThemeExtension<PaletteColorsExtension> {
       textPrimary: Color.lerp(textPrimary, other.textPrimary, t)!,
       textSecondary: Color.lerp(textSecondary, other.textSecondary, t)!,
       border: Color.lerp(border, other.border, t)!,
+      disabled: Color.lerp(disabled, other.disabled, t)!,
       success: Color.lerp(success, other.success, t)!,
       backSuccess: Color.lerp(backSuccess, other.backSuccess, t)!,
       warning: Color.lerp(warning, other.warning, t)!,
