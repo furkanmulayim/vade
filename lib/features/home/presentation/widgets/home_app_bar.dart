@@ -12,29 +12,33 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.nameCode,
     this.onSearch,
     this.onNotifications,
+    this.bottom,
   });
 
   final String? nameCode;
   final VoidCallback? onSearch;
   final VoidCallback? onNotifications;
+  final PreferredSizeWidget? bottom;
 
   @override
-  Size get preferredSize => const Size.fromHeight(80);
+  Size get preferredSize =>
+      Size.fromHeight(64 + (bottom?.preferredSize.height ?? 0));
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
       title: _buildTitle(context),
+      bottom: bottom,
       actions: [
         _buildAction(
           iconPath: AssetPath.search,
-          tooltip: LocaleKeys.home_search.tr(),
+          tooltip: context.tr(LocaleKeys.home_search),
           onPressed: onSearch,
         ),
         _buildAction(
           iconPath: AssetPath.notification,
-          tooltip: LocaleKeys.home_notifications.tr(),
+          tooltip: context.tr(LocaleKeys.home_notifications),
           onPressed: onNotifications,
         ),
         const SizedBox(width: 8),
@@ -77,7 +81,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       spacing: 2,
       children: [
         Text(
-          LocaleKeys.home_welcome.tr(),
+          context.tr(LocaleKeys.home_welcome),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           style: context.typo.size18(),

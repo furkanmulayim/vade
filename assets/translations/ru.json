@@ -13,5 +13,14 @@
     "home_total": "Всего",
     "home_upcoming": "Скоро",
     "home_expired": "Истекшие",
-    "home_quick_record_description": "Изменить детали позже"
+    "home_quick_record_description": "Изменить детали позже",
+    "category_all": "Все",
+    "category_electronics": "Электроника",
+    "category_vehicle_and_transport": "Авто и транспорт",
+    "category_home_living": "Дом и быт",
+    "category_health": "Здоровье",
+    "category_finance": "Финансы",
+    "category_subscriptions": "Подписки",
+    "category_education": "Образование",
+    "category_other": "Другое"
 }

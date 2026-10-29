@@ -13,5 +13,14 @@
     "home_total": "总计",
     "home_upcoming": "即将到期",
     "home_expired": "已过期",
-    "home_quick_record_description": "稍后编辑详情"
+    "home_quick_record_description": "稍后编辑详情",
+    "category_all": "全部",
+    "category_electronics": "电子产品",
+    "category_vehicle_and_transport": "车辆与交通",
+    "category_home_living": "家居生活",
+    "category_health": "健康",
+    "category_finance": "财务",
+    "category_subscriptions": "订阅",
+    "category_education": "教育",
+    "category_other": "其他"
 }

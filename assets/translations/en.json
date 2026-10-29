@@ -13,5 +13,14 @@
     "home_total": "Total",
     "home_upcoming": "Upcoming",
     "home_expired": "Expired",
-    "home_quick_record_description": "Edit details later"
+    "home_quick_record_description": "Edit details later",
+    "category_all": "All",
+    "category_electronics": "Electronics",
+    "category_vehicle_and_transport": "Vehicle and Transport",
+    "category_home_living": "Home Living",
+    "category_health": "Health",
+    "category_finance": "Finance",
+    "category_subscriptions": "Subscriptions",
+    "category_education": "Education",
+    "category_other": "Other"
 }

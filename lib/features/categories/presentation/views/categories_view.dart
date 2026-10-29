@@ -14,7 +14,7 @@ class CategoriesView extends StatelessWidget {
     body: SafeArea(
       child: Center(
         child: Text(
-          LocaleKeys.navigation_categories.tr(),
+          context.tr(LocaleKeys.navigation_categories),
           style: context.typo.size24(weight: .w500),
           textAlign: TextAlign.center,
         ),

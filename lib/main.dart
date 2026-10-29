@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 
 import 'app/app.dart';
 import 'app/app_localization.dart';
+import 'app/system_locale_sync.dart';
 import 'core/di/injection.dart';
 
 Future<void> main() async {
@@ -20,7 +21,8 @@ Future<void> main() async {
       supportedLocales: AppLocalization.supportedLocales,
       path: AppLocalization.path,
       fallbackLocale: AppLocalization.fallbackLocale,
-      child: const VadeApp(),
+      saveLocale: false,
+      child: const SystemLocaleSync(child: VadeApp()),
     ),
   );
 }

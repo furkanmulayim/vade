@@ -27,7 +27,25 @@ abstract final class WidgetThemes {
         surfaceTintColor: Colors.transparent,
         elevation: 0,
         scrolledUnderElevation: 0,
-        toolbarHeight: 80,
+        toolbarHeight: 64,
         titleSpacing: 16,
+      );
+
+  // Tab Bar
+  static TabBarThemeData tabBar(PaletteColorsExtension colors) =>
+      TabBarThemeData(
+        tabAlignment: TabAlignment.start,
+        labelPadding: const EdgeInsets.symmetric(horizontal: 12),
+        labelColor: colors.primary,
+        unselectedLabelColor: colors.textSecondary,
+        labelStyle: TextStyles(colors).size14(weight: FontWeight.w600),
+        unselectedLabelStyle: TextStyles(colors).size14(),
+        indicatorColor: colors.primary,
+        dividerColor: colors.border,
+        splashFactory: NoSplash.splashFactory,
+        overlayColor: WidgetStateProperty.resolveWith<Color?>(
+          (states) =>
+              states.contains(WidgetState.pressed) ? Colors.transparent : null,
+        ),
       );
 }

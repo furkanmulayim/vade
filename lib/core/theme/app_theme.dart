@@ -47,6 +47,7 @@ class AppTheme {
       brightness: Brightness.light,
       colorScheme: scheme,
       appBarTheme: WidgetThemes.appBar(colors),
+      tabBarTheme: WidgetThemes.tabBar(colors),
       filledButtonTheme: WidgetThemes.filledButton(colors),
       extensions: [colors],
     );
@@ -94,6 +95,7 @@ class AppTheme {
       brightness: Brightness.dark,
       colorScheme: scheme,
       appBarTheme: WidgetThemes.appBar(colors),
+      tabBarTheme: WidgetThemes.tabBar(colors),
       filledButtonTheme: WidgetThemes.filledButton(colors),
       extensions: [colors],
     );

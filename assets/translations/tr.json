@@ -13,5 +13,14 @@
     "home_total": "Toplam",
     "home_upcoming": "Yaklaşan",
     "home_expired": "Süresi Geçen",
-    "home_quick_record_description": "Detayları sonra düzenle"
+    "home_quick_record_description": "Detayları sonra düzenle",
+    "category_all": "Tümü",
+    "category_electronics": "Elektronik",
+    "category_vehicle_and_transport": "Araç ve Ulaşım",
+    "category_home_living": "Ev Yaşam",
+    "category_health": "Sağlık",
+    "category_finance": "Finans",
+    "category_subscriptions": "Abonelikler",
+    "category_education": "Eğitim",
+    "category_other": "Diğer"
 }
