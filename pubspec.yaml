@@ -34,5 +34,7 @@ flutter:
 
   assets:
     - assets/translations/
-    - assets/images/svg/nav_icons/
-    - assets/images/svg/icons/
+    - assets/images/icons_nav/
+    - assets/images/icons_other/
+    - assets/images/icons_slim/
+    - assets/images/icons_category/

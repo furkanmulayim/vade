@@ -38,7 +38,7 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    backgroundColor: context.color.primary,
+    backgroundColor: context.color.card,
     body: SafeArea(
       child: Center(
         child: Column(
@@ -51,7 +51,7 @@ class _SplashViewState extends State<SplashView> {
             ),
             const SizedBox(height: 16),
             Text(
-              LocaleKeys.name.tr(),
+              context.tr(LocaleKeys.name),
               style: context.typo.size24(
                 color: context.color.onPrimary,
                 weight: .w700,

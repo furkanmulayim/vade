@@ -14,7 +14,7 @@ class SettingsView extends StatelessWidget {
     body: SafeArea(
       child: Center(
         child: Text(
-          LocaleKeys.navigation_settings.tr(),
+          context.tr(LocaleKeys.navigation_settings),
           style: context.typo.size24(weight: .w500),
           textAlign: TextAlign.center,
         ),

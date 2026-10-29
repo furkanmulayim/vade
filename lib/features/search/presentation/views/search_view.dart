@@ -10,11 +10,11 @@ class SearchView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: Text(LocaleKeys.home_search.tr())),
+    appBar: AppBar(title: Text(context.tr(LocaleKeys.home_search))),
     body: SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(16),
-        child: Center(child: Text(LocaleKeys.home_search.tr())),
+        child: Center(child: Text(context.tr(LocaleKeys.home_search))),
       ),
     ),
   );

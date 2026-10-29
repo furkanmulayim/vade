@@ -11,11 +11,11 @@ class CreateView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: Text(LocaleKeys.navigation_create.tr())),
+    appBar: AppBar(title: Text(context.tr(LocaleKeys.navigation_create))),
     body: SafeArea(
       child: Center(
         child: Text(
-          LocaleKeys.navigation_create.tr(),
+          context.tr(LocaleKeys.navigation_create),
           style: context.typo.size24(weight: .w500),
           textAlign: TextAlign.center,
         ),

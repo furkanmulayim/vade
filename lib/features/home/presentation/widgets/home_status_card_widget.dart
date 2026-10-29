@@ -62,13 +62,13 @@ class HomeStatusCardWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                LocaleKeys.home_quick_record.tr(),
+                context.tr(LocaleKeys.home_quick_record),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: context.typo.size14(),
               ),
               Text(
-                LocaleKeys.home_quick_record_description.tr(),
+                context.tr(LocaleKeys.home_quick_record_description),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: context.typo.size12(color: colors.textSecondary),
@@ -77,7 +77,7 @@ class HomeStatusCardWidget extends StatelessWidget {
           ),
         ),
         ButtonMiniPrimary(
-          text: LocaleKeys.home_new_record.tr(),
+          text: context.tr(LocaleKeys.home_new_record),
           onPressed: onCreate,
         ),
       ],
@@ -92,14 +92,14 @@ class HomeStatusCardWidget extends StatelessWidget {
         children: [
           _buildStatistic(
             context,
-            title: LocaleKeys.home_total.tr(),
+            title: context.tr(LocaleKeys.home_total),
             count: totalCount,
             iconPath: AssetPath.check,
           ),
           VerticalDivider(width: 1, color: colors.border),
           _buildStatistic(
             context,
-            title: LocaleKeys.home_upcoming.tr(),
+            title: context.tr(LocaleKeys.home_upcoming),
             count: upcomingCount,
             iconPath: AssetPath.watch,
             iconColor: colors.upcoming,
@@ -107,7 +107,7 @@ class HomeStatusCardWidget extends StatelessWidget {
           VerticalDivider(width: 1, color: colors.border),
           _buildStatistic(
             context,
-            title: LocaleKeys.home_expired.tr(),
+            title: context.tr(LocaleKeys.home_expired),
             count: expiredCount,
             iconPath: AssetPath.alert,
             iconColor: colors.expired,
