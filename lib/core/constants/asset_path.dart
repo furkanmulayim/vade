@@ -4,6 +4,11 @@ abstract final class AssetPath {
 
   static const search = '$_icons/search.svg';
   static const notification = '$_icons/notification.svg';
+  
+  static const alert = '$_icons/alert_slim.svg';
+  static const check = '$_icons/check_slim.svg';
+  static const watch = '$_icons/watch_slim.svg';
+  static const lightning = '$_icons/lightning_slim.svg';
 
   // Navigation Icons
   static const _navIcons = 'assets/images/svg/nav_icons';

@@ -14,13 +14,13 @@ class MainView extends StatelessWidget {
     routes: const [
       HomeRoute(),
       CategoriesRoute(),
-      CreateRoute(),
       DocumentsRoute(),
       SettingsRoute(),
     ],
     bottomNavigationBuilder: (context, tabsRouter) => MainBottomNavigation(
       selectedIndex: tabsRouter.activeIndex,
       onSelected: tabsRouter.setActiveIndex,
+      onCreate: () => context.router.push(const CreateRoute()),
     ),
   );
 }

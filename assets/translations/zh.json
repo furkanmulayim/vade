@@ -7,5 +7,11 @@
     "navigation_documents": "文档",
     "navigation_settings": "设置",
     "home_search": "搜索",
-    "home_notifications": "通知"
+    "home_notifications": "通知",
+    "home_quick_record": "快速创建记录",
+    "home_new_record": "新建记录",
+    "home_total": "总计",
+    "home_upcoming": "即将到期",
+    "home_expired": "已过期",
+    "home_quick_record_description": "稍后编辑详情"
 }
