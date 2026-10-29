@@ -7,5 +7,11 @@
     "navigation_documents": "Documents",
     "navigation_settings": "Paramètres",
     "home_search": "Rechercher",
-    "home_notifications": "Notifications"
+    "home_notifications": "Notifications",
+    "home_quick_record": "Créer rapidement",
+    "home_new_record": "Nouvelle fiche",
+    "home_total": "Total",
+    "home_upcoming": "À venir",
+    "home_expired": "Expirés",
+    "home_quick_record_description": "Modifier les détails plus tard"
 }

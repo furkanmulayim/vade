@@ -7,5 +7,11 @@
     "navigation_documents": "Документы",
     "navigation_settings": "Настройки",
     "home_search": "Поиск",
-    "home_notifications": "Уведомления"
+    "home_notifications": "Уведомления",
+    "home_quick_record": "Быстрое создание",
+    "home_new_record": "Новая запись",
+    "home_total": "Всего",
+    "home_upcoming": "Скоро",
+    "home_expired": "Истекшие",
+    "home_quick_record_description": "Изменить детали позже"
 }

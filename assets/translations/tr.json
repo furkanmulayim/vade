@@ -7,5 +7,11 @@
     "navigation_documents": "Belgelerim",
     "navigation_settings": "Ayarlar",
     "home_search": "Ara",
-    "home_notifications": "Bildirimler"
+    "home_notifications": "Bildirimler",
+    "home_quick_record": "Hızlı kayıt",
+    "home_new_record": "Yeni kayıt oluştur",
+    "home_total": "Toplam",
+    "home_upcoming": "Yaklaşan",
+    "home_expired": "Süresi Geçen",
+    "home_quick_record_description": "Detayları sonra düzenle"
 }

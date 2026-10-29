@@ -11,6 +11,7 @@ class CreateView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+    appBar: AppBar(title: Text(LocaleKeys.navigation_create.tr())),
     body: SafeArea(
       child: Center(
         child: Text(

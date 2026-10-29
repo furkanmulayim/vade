@@ -57,7 +57,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget _buildAvatar(BuildContext context) {
     return CircleAvatar(
       radius: 20,
-      backgroundColor: context.color.backWarning,
+      backgroundColor: context.color.backUpcoming,
       child: Text(
         nameCode!.substring(0, 2).toUpperCase(),
         style: context.typo.size16(color: context.color.primary),

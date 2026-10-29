@@ -27,24 +27,24 @@ abstract final class Palette {
   static const disabledLight = Color(0xFFB4B4B4);
   static const disabledDark = Color(0xFF4D4D4D);
 
-  //Success
-  static const successLight = Color(0xFF3DAE2B);
-  static const successDark = Color(0xFF478C3C);
+  //Relax
+  static const relaxLight = Color(0xFF3DAE2B);
+  static const relaxDark = Color(0xFF478C3C);
 
-  static const successBackLight = Color(0xFFF3FFF8);
-  static const successBackDark = Color(0xFF24352B);
+  static const relaxBackLight = Color(0xFFF3FFF8);
+  static const relaxBackDark = Color(0xFF24352B);
 
-  //Warning
-  static const warningLight = Color(0xFFFA7319);
-  static const warningDark = Color(0xFFBC6F3B);
+  //Upcoming
+  static const upcomingLight = Color(0xFFFA7319);
+  static const upcomingDark = Color(0xFFBC6F3B);
 
-  static const warningBackLight = Color(0xFFFFF9EB);
-  static const warningBackDark = Color(0xFF332D1F);
+  static const upcomingBackLight = Color(0xFFFFF9EB);
+  static const upcomingBackDark = Color(0xFF332D1F);
 
-  //Danger
-  static const dangerLight = Color(0xFFFB3748);
-  static const dangerDark = Color(0xFFFFEBEB);
+  //Expired
+  static const expiredLight = Color(0xFFFB3748);
+  static const expiredDark = Color(0xFFD03D49);
 
-  static const dangerBackLight = Color(0xFFF44336);
-  static const dangerBackDark = Color(0xFF392222);
+  static const expiredBackLight = Color(0xFFF44336);
+  static const expiredBackDark = Color(0xFF392222);
 }

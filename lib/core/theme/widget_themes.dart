@@ -9,6 +9,17 @@ abstract final class WidgetThemes {
   static TextTheme textTheme(PaletteColorsExtension colors) =>
       TextTheme(bodyMedium: TextStyles(colors).size14());
 
+  // Filled Button
+  static FilledButtonThemeData filledButton(PaletteColorsExtension colors) =>
+      FilledButtonThemeData(
+        style: FilledButton.styleFrom(
+          backgroundColor: colors.primary,
+          foregroundColor: colors.onPrimary,
+          disabledBackgroundColor: colors.disabled,
+          disabledForegroundColor: colors.border,
+        ),
+      );
+
   // App Bar
   static AppBarThemeData appBar(PaletteColorsExtension colors) =>
       AppBarThemeData(

@@ -10,11 +10,13 @@ class MainBottomNavigation extends StatelessWidget {
   const MainBottomNavigation({
     required this.selectedIndex,
     required this.onSelected,
+    required this.onCreate,
     super.key,
   });
 
   final int selectedIndex;
   final ValueChanged<int> onSelected;
+  final VoidCallback onCreate;
 
   static const _items = [
     (AssetPath.navHome, LocaleKeys.navigation_home),
@@ -37,12 +39,13 @@ class MainBottomNavigation extends StatelessWidget {
         child: Row(
           children: List.generate(_items.length, (index) {
             final (icon, label) = _items[index];
+            final tabIndex = index > 2 ? index - 1 : index;
             return Expanded(
               child: _NavigationItem(
                 icon: icon,
                 label: label.tr(),
-                selected: selectedIndex == index,
-                onTap: () => onSelected(index),
+                selected: icon != null && selectedIndex == tabIndex,
+                onTap: icon == null ? onCreate : () => onSelected(tabIndex),
               ),
             );
           }),

@@ -15,12 +15,12 @@ class AppTheme {
       textSecondary: Palette.textSecondaryLight,
       border: Palette.borderLight,
       disabled: Palette.disabledLight,
-      success: Palette.successLight,
-      backSuccess: Palette.successBackLight,
-      warning: Palette.warningLight,
-      backWarning: Palette.warningBackLight,
-      danger: Palette.dangerLight,
-      backDanger: Palette.dangerBackLight,
+      relax: Palette.relaxLight,
+      backRelax: Palette.relaxBackLight,
+      upcoming: Palette.upcomingLight,
+      backUpcoming: Palette.upcomingBackLight,
+      expired: Palette.expiredLight,
+      backExpired: Palette.expiredBackLight,
     );
     final scheme =
         ColorScheme.fromSeed(
@@ -47,6 +47,7 @@ class AppTheme {
       brightness: Brightness.light,
       colorScheme: scheme,
       appBarTheme: WidgetThemes.appBar(colors),
+      filledButtonTheme: WidgetThemes.filledButton(colors),
       extensions: [colors],
     );
   }
@@ -61,12 +62,12 @@ class AppTheme {
       textSecondary: Palette.textSecondaryDark,
       border: Palette.borderDark,
       disabled: Palette.disabledDark,
-      success: Palette.successDark,
-      backSuccess: Palette.successBackDark,
-      warning: Palette.warningDark,
-      backWarning: Palette.warningBackDark,
-      danger: Palette.dangerDark,
-      backDanger: Palette.dangerBackDark,
+      relax: Palette.relaxDark,
+      backRelax: Palette.relaxBackDark,
+      upcoming: Palette.upcomingDark,
+      backUpcoming: Palette.upcomingBackDark,
+      expired: Palette.expiredDark,
+      backExpired: Palette.expiredBackDark,
     );
     final scheme =
         ColorScheme.fromSeed(
@@ -93,6 +94,7 @@ class AppTheme {
       brightness: Brightness.dark,
       colorScheme: scheme,
       appBarTheme: WidgetThemes.appBar(colors),
+      filledButtonTheme: WidgetThemes.filledButton(colors),
       extensions: [colors],
     );
   }
