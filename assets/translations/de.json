@@ -22,5 +22,26 @@
     "category_finance": "Finanzen",
     "category_subscriptions": "Abonnements",
     "category_education": "Bildung",
-    "category_other": "Sonstiges"
+    "category_other": "Sonstiges",
+    "home_my_records": "MEINE EINTRÄGE",
+    "home_sort": "Sortieren",
+    "due_expired": "Abgelaufen",
+    "due_last_day": "Letzter Tag",
+    "due_days_left": {
+        "one": "Noch {count} Tag",
+        "other": "Noch {count} Tage"
+    },
+    "due_months_left": {
+        "one": "Noch {count} Monat",
+        "other": "Noch {count} Monate"
+    },
+    "due_documents": {
+        "one": "{count} Dokument",
+        "other": "{count} Dokumente"
+    },
+    "home_sample_health_title": "Private Krankenversicherung",
+    "home_sample_health_description": "Zusatzkrankenversicherung Tarif (A)",
+    "home_sample_computer_description": "Mein Computer für private Bearbeitungen",
+    "home_sample_car_title": "Hyundai Kaskoversicherung",
+    "home_sample_car_description": "Über die Garanti Bank abgeschlossene Versicherung"
 }

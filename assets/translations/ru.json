@@ -22,5 +22,32 @@
     "category_finance": "Финансы",
     "category_subscriptions": "Подписки",
     "category_education": "Образование",
-    "category_other": "Другое"
+    "category_other": "Другое",
+    "home_my_records": "МОИ ЗАПИСИ",
+    "home_sort": "Сортировать",
+    "due_expired": "Срок истёк",
+    "due_last_day": "Последний день",
+    "due_days_left": {
+        "one": "Остался {count} день",
+        "other": "Осталось {count} дней",
+        "few": "Осталось {count} дня",
+        "many": "Осталось {count} дней"
+    },
+    "due_months_left": {
+        "one": "Остался {count} месяц",
+        "other": "Осталось {count} месяцев",
+        "few": "Осталось {count} месяца",
+        "many": "Осталось {count} месяцев"
+    },
+    "due_documents": {
+        "one": "{count} документ",
+        "other": "{count} документов",
+        "few": "{count} документа",
+        "many": "{count} документов"
+    },
+    "home_sample_health_title": "Частное медицинское страхование",
+    "home_sample_health_description": "Дополнительное медицинское страхование, план (A)",
+    "home_sample_computer_description": "Мой компьютер для личного монтажа",
+    "home_sample_car_title": "Каско Hyundai",
+    "home_sample_car_description": "Страховка, оформленная через Garanti Bank"
 }

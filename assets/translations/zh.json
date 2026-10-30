@@ -22,5 +22,26 @@
     "category_finance": "财务",
     "category_subscriptions": "订阅",
     "category_education": "教育",
-    "category_other": "其他"
+    "category_other": "其他",
+    "home_my_records": "我的记录",
+    "home_sort": "排序",
+    "due_expired": "已到期",
+    "due_last_day": "最后一天",
+    "due_days_left": {
+        "one": "剩余 {count} 天",
+        "other": "剩余 {count} 天"
+    },
+    "due_months_left": {
+        "one": "剩余 {count} 个月",
+        "other": "剩余 {count} 个月"
+    },
+    "due_documents": {
+        "one": "{count} 份文档",
+        "other": "{count} 份文档"
+    },
+    "home_sample_health_title": "私人医疗保险",
+    "home_sample_health_description": "补充医疗保险方案 (A)",
+    "home_sample_computer_description": "用于个人剪辑的电脑",
+    "home_sample_car_title": "现代汽车车损险",
+    "home_sample_car_description": "通过 Garanti 银行办理的保险"
 }

@@ -22,6 +22,7 @@ Future<void> main() async {
       path: AppLocalization.path,
       fallbackLocale: AppLocalization.fallbackLocale,
       saveLocale: false,
+      ignorePluralRules: false,
       child: const SystemLocaleSync(child: VadeApp()),
     ),
   );

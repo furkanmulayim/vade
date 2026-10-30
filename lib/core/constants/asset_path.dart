@@ -10,7 +10,9 @@ abstract final class AssetPath {
   static const alert = '$_iconsSlim/alert.svg';
   static const check = '$_iconsSlim/check.svg';
   static const watch = '$_iconsSlim/watch.svg';
+  static const calendar = '$_iconsSlim/calendar.svg';
   static const lightning = '$_iconsSlim/lightning.svg';
+  static const sort = '$_iconsSlim/sort.svg';
 
   // Category Icons
   static const _category = 'assets/images/icons_category';

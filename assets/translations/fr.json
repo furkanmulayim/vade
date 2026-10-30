@@ -22,5 +22,26 @@
     "category_finance": "Finances",
     "category_subscriptions": "Abonnements",
     "category_education": "Éducation",
-    "category_other": "Autre"
+    "category_other": "Autre",
+    "home_my_records": "MES ENREGISTREMENTS",
+    "home_sort": "Trier",
+    "due_expired": "Expiré",
+    "due_last_day": "Dernier jour",
+    "due_days_left": {
+        "one": "{count} jour restant",
+        "other": "{count} jours restants"
+    },
+    "due_months_left": {
+        "one": "{count} mois restant",
+        "other": "{count} mois restants"
+    },
+    "due_documents": {
+        "one": "{count} document",
+        "other": "{count} documents"
+    },
+    "home_sample_health_title": "Assurance santé privée",
+    "home_sample_health_description": "Complémentaire santé formule (A)",
+    "home_sample_computer_description": "Mon ordinateur pour mes montages personnels",
+    "home_sample_car_title": "Assurance auto Hyundai",
+    "home_sample_car_description": "Assurance souscrite auprès de Garanti Bank"
 }
