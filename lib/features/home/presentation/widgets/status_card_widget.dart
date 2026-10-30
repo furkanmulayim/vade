@@ -8,8 +8,8 @@ import '../../../../core/widgets/button_mini_primary.dart';
 import '../../../../core/widgets/card_widget.dart';
 import '../../../../core/widgets/icon_widget.dart';
 
-class HomeStatusCardWidget extends StatelessWidget {
-  const HomeStatusCardWidget({
+class StatusCardWidget extends StatelessWidget {
+  const StatusCardWidget({
     required this.totalCount,
     required this.upcomingCount,
     required this.expiredCount,
@@ -41,21 +41,6 @@ class HomeStatusCardWidget extends StatelessWidget {
     return Row(
       spacing: 8,
       children: [
-        Container(
-          width: 30,
-          height: 30,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: colors.surface,
-            shape: BoxShape.circle,
-            border: Border.all(color: colors.border),
-          ),
-          child: IconWidget(
-            path: AssetPath.lightning,
-            size: 16,
-            color: colors.textPrimary,
-          ),
-        ),
         Expanded(
           child: Column(
             mainAxisSize: MainAxisSize.min,

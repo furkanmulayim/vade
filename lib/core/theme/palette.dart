@@ -31,20 +31,20 @@ abstract final class Palette {
   static const relaxLight = Color(0xFF3DAE2B);
   static const relaxDark = Color(0xFF478C3C);
 
-  static const relaxBackLight = Color(0xFFF3FFF8);
+  static const relaxBackLight = Color.fromARGB(255, 244, 253, 248);
   static const relaxBackDark = Color(0xFF24352B);
 
   //Upcoming
   static const upcomingLight = Color(0xFFFA7319);
   static const upcomingDark = Color(0xFFBC6F3B);
 
-  static const upcomingBackLight = Color(0xFFFFF9EB);
+  static const upcomingBackLight = Color.fromARGB(255, 255, 251, 243);
   static const upcomingBackDark = Color(0xFF332D1F);
 
   //Expired
   static const expiredLight = Color(0xFFFB3748);
   static const expiredDark = Color(0xFFD03D49);
 
-  static const expiredBackLight = Color(0xFFF44336);
+  static const expiredBackLight = Color.fromARGB(255, 255, 243, 243);
   static const expiredBackDark = Color(0xFF392222);
 }

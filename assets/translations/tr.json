@@ -22,5 +22,26 @@
     "category_finance": "Finans",
     "category_subscriptions": "Abonelikler",
     "category_education": "Eğitim",
-    "category_other": "Diğer"
+    "category_other": "Diğer",
+    "home_my_records": "KAYITLARIM",
+    "home_sort": "Sırala",
+    "due_expired": "Geçti",
+    "due_last_day": "Son Gün",
+    "due_days_left": {
+        "one": "{count} Gün Kaldı",
+        "other": "{count} Gün Kaldı"
+    },
+    "due_months_left": {
+        "one": "{count} Ay Kaldı",
+        "other": "{count} Ay Kaldı"
+    },
+    "due_documents": {
+        "one": "{count} Belge",
+        "other": "{count} Belge"
+    },
+    "home_sample_health_title": "Özel Sağlık Sigortası",
+    "home_sample_health_description": "Tamamlayıcı sağlık sigortası plan (A)",
+    "home_sample_computer_description": "Kişisel edit yaptığım bilgisayarım",
+    "home_sample_car_title": "Hyundai Kasko",
+    "home_sample_car_description": "Garanti bankası ile yapılan anlaşmalı sigorta"
 }

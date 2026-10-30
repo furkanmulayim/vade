@@ -22,5 +22,26 @@
     "category_finance": "Finance",
     "category_subscriptions": "Subscriptions",
     "category_education": "Education",
-    "category_other": "Other"
+    "category_other": "Other",
+    "home_my_records": "MY RECORDS",
+    "home_sort": "Sort",
+    "due_expired": "Expired",
+    "due_last_day": "Last Day",
+    "due_days_left": {
+        "one": "{count} Day Left",
+        "other": "{count} Days Left"
+    },
+    "due_months_left": {
+        "one": "{count} Month Left",
+        "other": "{count} Months Left"
+    },
+    "due_documents": {
+        "one": "{count} Document",
+        "other": "{count} Documents"
+    },
+    "home_sample_health_title": "Private Health Insurance",
+    "home_sample_health_description": "Supplementary health insurance plan (A)",
+    "home_sample_computer_description": "My computer for personal editing",
+    "home_sample_car_title": "Hyundai Car Insurance",
+    "home_sample_car_description": "Insurance arranged through Garanti Bank"
 }
