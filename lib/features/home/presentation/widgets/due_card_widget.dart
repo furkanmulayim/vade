@@ -6,7 +6,7 @@ import '../../../../core/constants/locale_keys.g.dart';
 import '../../../../core/extensions/context_extension.dart';
 import '../../../../core/extensions/due_date_status_extension.dart';
 import '../../../../core/models/due_date_status.dart';
-import '../../../../core/widgets/icon_widget.dart';
+import '../../../../core/widgets/custom_icon_widget.dart';
 import '../../../categories/domain/enums/category_enum.dart';
 
 class DueCardWidget extends StatelessWidget {
@@ -115,7 +115,11 @@ class DueCardWidget extends StatelessWidget {
             color: status.color(colors),
             backgroundColor: colors.border,
           ),
-          IconWidget(path: category.icon, size: 18, color: colors.textPrimary),
+          CustomIconWidget(
+            path: category.icon,
+            size: 18,
+            color: colors.textPrimary,
+          ),
         ],
       ),
     );
@@ -170,7 +174,7 @@ class DueCardWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             if (icon != null)
-              IconWidget(path: icon, size: 14, color: foreground),
+              CustomIconWidget(path: icon, size: 14, color: foreground),
             Flexible(
               child: Text(
                 label,

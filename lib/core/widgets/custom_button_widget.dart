@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../extensions/context_extension.dart';
 
-class ButtonMiniPrimary extends StatefulWidget {
-  const ButtonMiniPrimary({
+class CustomButtonWidget extends StatefulWidget {
+  const CustomButtonWidget({
     required this.text,
     super.key,
     this.onPressed,
@@ -15,10 +15,10 @@ class ButtonMiniPrimary extends StatefulWidget {
   final bool isDisabled;
 
   @override
-  State<ButtonMiniPrimary> createState() => _ButtonMiniPrimaryState();
+  State<CustomButtonWidget> createState() => _CustomButtonWidgetState();
 }
 
-class _ButtonMiniPrimaryState extends State<ButtonMiniPrimary> {
+class _CustomButtonWidgetState extends State<CustomButtonWidget> {
   final _clickCooldown = Stopwatch();
 
   void _handlePressed() {

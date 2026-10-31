@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class IconWidget extends StatelessWidget {
-  const IconWidget({
+class CustomIconWidget extends StatelessWidget {
+  const CustomIconWidget({
     required this.path,
     required this.size,
     required this.color,

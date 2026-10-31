@@ -10,6 +10,7 @@ class AppTheme {
       primary: Palette.primary,
       onPrimary: Palette.onPrimary,
       surface: Palette.surfaceLight,
+      surfaceSheet: Palette.surfaceSheetLight,
       card: Palette.cardLight,
       textPrimary: Palette.textPrimaryLight,
       textSecondary: Palette.textSecondaryLight,
@@ -49,6 +50,7 @@ class AppTheme {
       appBarTheme: WidgetThemes.appBar(colors),
       tabBarTheme: WidgetThemes.tabBar(colors),
       filledButtonTheme: WidgetThemes.filledButton(colors),
+      bottomSheetTheme: WidgetThemes.bottomSheet(colors),
       extensions: [colors],
     );
   }
@@ -58,6 +60,7 @@ class AppTheme {
       primary: Palette.primary,
       onPrimary: Palette.onPrimary,
       surface: Palette.surfaceDark,
+      surfaceSheet: Palette.surfaceSheetDark,
       card: Palette.cardDark,
       textPrimary: Palette.textPrimaryDark,
       textSecondary: Palette.textSecondaryDark,
@@ -97,6 +100,7 @@ class AppTheme {
       appBarTheme: WidgetThemes.appBar(colors),
       tabBarTheme: WidgetThemes.tabBar(colors),
       filledButtonTheme: WidgetThemes.filledButton(colors),
+      bottomSheetTheme: WidgetThemes.bottomSheet(colors),
       extensions: [colors],
     );
   }

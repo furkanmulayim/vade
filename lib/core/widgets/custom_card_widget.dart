@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../extensions/context_extension.dart';
 
-class CardWidget extends StatelessWidget {
-  const CardWidget({
+class CustomCardWidget extends StatelessWidget {
+  const CustomCardWidget({
     required this.child,
     super.key,
     this.padding = const EdgeInsets.all(12),

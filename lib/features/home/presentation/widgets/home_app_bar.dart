@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/constants/asset_path.dart';
 import '../../../../core/constants/locale_keys.g.dart';
 import '../../../../core/extensions/context_extension.dart';
-import '../../../../core/widgets/icon_widget.dart';
+import '../../../../core/widgets/custom_icon_widget.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({
@@ -108,7 +108,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         return IconButton(
           onPressed: onPressed,
           tooltip: tooltip,
-          icon: IconWidget(path: iconPath, size: 26, color: color),
+          icon: CustomIconWidget(path: iconPath, size: 26, color: color),
         );
       },
     );

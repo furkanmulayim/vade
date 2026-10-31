@@ -6,7 +6,8 @@ import '../../../../app/router/app_router.dart';
 import '../../../../core/constants/asset_path.dart';
 import '../../../../core/constants/locale_keys.g.dart';
 import '../../../../core/extensions/context_extension.dart';
-import '../../../../core/widgets/icon_widget.dart';
+import '../../../../core/widgets/custom_sheet_widget.dart';
+import '../../../../core/widgets/custom_icon_widget.dart';
 import '../../../categories/domain/enums/category_enum.dart';
 import '../../../categories/presentation/widgets/category_tab_bar.dart';
 import '../widgets/due_card_widget.dart';
@@ -107,7 +108,15 @@ class _HomeViewState extends State<HomeView> {
             style: context.typo.size12(color: color).copyWith(letterSpacing: 1),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () => showModalBottomSheet<void>(
+              context: context,
+              isScrollControlled: true,
+              useSafeArea: true,
+              builder: (context) => CustomSheetWidget(
+                title: context.tr(LocaleKeys.home_sort),
+                content: const SizedBox(height: 160),
+              ),
+            ),
             style: TextButton.styleFrom(
               foregroundColor: color,
               padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -125,7 +134,7 @@ class _HomeViewState extends State<HomeView> {
                   context.tr(LocaleKeys.home_sort),
                   style: context.typo.size12(color: color),
                 ),
-                IconWidget(path: AssetPath.sort, size: 14, color: color),
+                CustomIconWidget(path: AssetPath.sort, size: 14, color: color),
               ],
             ),
           ),

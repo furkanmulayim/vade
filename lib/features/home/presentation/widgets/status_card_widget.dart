@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import '../../../../core/constants/asset_path.dart';
 import '../../../../core/constants/locale_keys.g.dart';
 import '../../../../core/extensions/context_extension.dart';
-import '../../../../core/widgets/button_mini_primary.dart';
-import '../../../../core/widgets/card_widget.dart';
-import '../../../../core/widgets/icon_widget.dart';
+import '../../../../core/widgets/custom_button_widget.dart';
+import '../../../../core/widgets/custom_card_widget.dart';
+import '../../../../core/widgets/custom_icon_widget.dart';
 
 class StatusCardWidget extends StatelessWidget {
   const StatusCardWidget({
@@ -24,7 +24,7 @@ class StatusCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CardWidget(
+    return CustomCardWidget(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -61,7 +61,7 @@ class StatusCardWidget extends StatelessWidget {
             ],
           ),
         ),
-        ButtonMiniPrimary(
+        CustomButtonWidget(
           text: context.tr(LocaleKeys.home_new_record),
           onPressed: onCreate,
         ),
@@ -124,7 +124,7 @@ class StatusCardWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              IconWidget(
+              CustomIconWidget(
                 path: iconPath,
                 size: 18,
                 color: iconColor ?? colors.textSecondary,
