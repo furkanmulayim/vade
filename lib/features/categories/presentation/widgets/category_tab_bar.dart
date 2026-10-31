@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/locale_keys.g.dart';
-import '../../../../core/widgets/icon_widget.dart';
+import '../../../../core/widgets/custom_icon_widget.dart';
 import '../../domain/enums/category_enum.dart';
 
 class CategoryTabBar extends StatelessWidget implements PreferredSizeWidget {
@@ -49,7 +49,7 @@ class CategoryTabBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           if (icon != null)
             Builder(
-              builder: (context) => IconWidget(
+              builder: (context) => CustomIconWidget(
                 path: icon,
                 size: 16,
                 color: IconTheme.of(context).color!,

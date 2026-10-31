@@ -5,6 +5,18 @@ import 'text_styles.dart';
 
 /// Bileşen temalarını uygulamanın tema renkleriyle oluşturur.
 abstract final class WidgetThemes {
+  // Bottom Sheet
+  static BottomSheetThemeData bottomSheet(PaletteColorsExtension colors) =>
+      BottomSheetThemeData(
+        backgroundColor: colors.surfaceSheet,
+        modalBackgroundColor: colors.surfaceSheet,
+        surfaceTintColor: Colors.transparent,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+        ),
+        clipBehavior: Clip.antiAlias,
+      );
+
   // Text
   static TextTheme textTheme(PaletteColorsExtension colors) =>
       TextTheme(bodyMedium: TextStyles(colors).size14());

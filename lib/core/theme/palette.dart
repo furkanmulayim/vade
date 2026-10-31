@@ -9,6 +9,9 @@ abstract final class Palette {
   static const surfaceLight = Color(0xFFF7F7F7);
   static const surfaceDark = Color(0xFF111111);
 
+  static const surfaceSheetLight = Color(0xFFF7F7F7);
+  static const surfaceSheetDark = Color(0xFF181818);
+
   //Card
   static const cardLight = Color(0xFFFFFFFF);
   static const cardDark = Color(0xFF202020);
