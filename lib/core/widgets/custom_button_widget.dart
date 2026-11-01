@@ -8,11 +8,13 @@ class CustomButtonWidget extends StatefulWidget {
     super.key,
     this.onPressed,
     this.isDisabled = false,
+    this.height,
   });
 
   final String text;
   final VoidCallback? onPressed;
   final bool isDisabled;
+  final double? height;
 
   @override
   State<CustomButtonWidget> createState() => _CustomButtonWidgetState();
@@ -35,18 +37,23 @@ class _CustomButtonWidgetState extends State<CustomButtonWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return FilledButton(
-      onPressed: widget.isDisabled || widget.onPressed == null
-          ? null
-          : _handlePressed,
-      style: FilledButton.styleFrom(
-        minimumSize: Size.zero,
-        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-        textStyle: context.typo.size14(),
+    return SizedBox(
+      height: widget.height,
+      child: FilledButton(
+        onPressed: widget.isDisabled || widget.onPressed == null
+            ? null
+            : _handlePressed,
+        style: FilledButton.styleFrom(
+          minimumSize: Size.zero,
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(widget.height != null ? 12 : 8),
+          ),
+          textStyle: context.typo.size14(),
+        ),
+        child: Text(widget.text),
       ),
-      child: Text(widget.text),
     );
   }
 }

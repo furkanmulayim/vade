@@ -25,6 +25,12 @@
     "category_other": "Diğer",
     "home_my_records": "KAYITLARIM",
     "home_sort": "Sırala",
+    "home_sort_apply": "Uygula",
+    "home_sort_default": "Varsayılan",
+    "home_sort_nearest": "Yakın tarihten uzağa",
+    "home_sort_farthest": "Uzak tarihten yakına",
+    "home_sort_a_z": "Alfabetik A-Z",
+    "home_sort_z_a": "Alfabetik Z-A",
     "due_expired": "Geçti",
     "due_last_day": "Son Gün",
     "due_days_left": {
