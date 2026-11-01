@@ -25,6 +25,12 @@
     "category_other": "其他",
     "home_my_records": "我的记录",
     "home_sort": "排序",
+    "home_sort_apply": "应用",
+    "home_sort_default": "默认",
+    "home_sort_nearest": "日期从近到远",
+    "home_sort_farthest": "日期从远到近",
+    "home_sort_a_z": "字母顺序 A-Z",
+    "home_sort_z_a": "字母顺序 Z-A",
     "due_expired": "已到期",
     "due_last_day": "最后一天",
     "due_days_left": {

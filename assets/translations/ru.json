@@ -25,6 +25,12 @@
     "category_other": "Другое",
     "home_my_records": "МОИ ЗАПИСИ",
     "home_sort": "Сортировать",
+    "home_sort_apply": "Применить",
+    "home_sort_default": "По умолчанию",
+    "home_sort_nearest": "Сначала ближайшие даты",
+    "home_sort_farthest": "Сначала дальние даты",
+    "home_sort_a_z": "По алфавиту A-Z",
+    "home_sort_z_a": "По алфавиту Z-A",
     "due_expired": "Срок истёк",
     "due_last_day": "Последний день",
     "due_days_left": {

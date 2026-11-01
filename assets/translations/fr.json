@@ -25,6 +25,12 @@
     "category_other": "Autre",
     "home_my_records": "MES ENREGISTREMENTS",
     "home_sort": "Trier",
+    "home_sort_apply": "Appliquer",
+    "home_sort_default": "Par défaut",
+    "home_sort_nearest": "Date la plus proche",
+    "home_sort_farthest": "Date la plus éloignée",
+    "home_sort_a_z": "Alphabétique A-Z",
+    "home_sort_z_a": "Alphabétique Z-A",
     "due_expired": "Expiré",
     "due_last_day": "Dernier jour",
     "due_days_left": {

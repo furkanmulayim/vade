@@ -1,17 +1,26 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
+import '../constants/locale_keys.g.dart';
 import '../extensions/context_extension.dart';
+import 'custom_button_widget.dart';
 
 class CustomSheetWidget extends StatelessWidget {
   const CustomSheetWidget({
     super.key,
     required this.content,
     this.title,
+    this.buttonText,
+    this.onButtonPressed,
+    this.isButtonDisabled = false,
     this.contentPadding = const EdgeInsets.fromLTRB(20, 0, 20, 20),
   });
 
   final Widget content;
   final String? title;
+  final String? buttonText;
+  final VoidCallback? onButtonPressed;
+  final bool isButtonDisabled;
   final EdgeInsetsGeometry contentPadding;
 
   @override
@@ -48,7 +57,7 @@ class CustomSheetWidget extends StatelessWidget {
                     children: [
                       if (title != null)
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
+                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
                           child: Text(title!, style: context.typo.size20()),
                         ),
                       Padding(padding: contentPadding, child: content),
@@ -56,6 +65,16 @@ class CustomSheetWidget extends StatelessWidget {
                   ),
                 ),
               ),
+              if (onButtonPressed != null)
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+                  child: CustomButtonWidget(
+                    height: 42,
+                    text: buttonText ?? context.tr(LocaleKeys.home_sort_apply),
+                    onPressed: onButtonPressed,
+                    isDisabled: isButtonDisabled,
+                  ),
+                ),
             ],
           ),
         ),

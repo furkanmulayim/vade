@@ -25,6 +25,12 @@
     "category_other": "Sonstiges",
     "home_my_records": "MEINE EINTRÄGE",
     "home_sort": "Sortieren",
+    "home_sort_apply": "Anwenden",
+    "home_sort_default": "Standard",
+    "home_sort_nearest": "Nächstes Datum zuerst",
+    "home_sort_farthest": "Fernstes Datum zuerst",
+    "home_sort_a_z": "Alphabetisch A-Z",
+    "home_sort_z_a": "Alphabetisch Z-A",
     "due_expired": "Abgelaufen",
     "due_last_day": "Letzter Tag",
     "due_days_left": {
