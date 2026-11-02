@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../app/router/app_router.dart';
+import '../../../create/presentation/views/create_view.dart';
 import '../../../../core/constants/asset_path.dart';
 import '../../../../core/constants/locale_keys.g.dart';
 import '../../../../core/extensions/context_extension.dart';
@@ -51,7 +52,7 @@ class _HomeViewState extends State<HomeView> {
                 totalCount: 80,
                 upcomingCount: 23,
                 expiredCount: 12,
-                onCreate: () => context.router.push(const CreateRoute()),
+                onCreate: () => showCreateSheet(context),
               ),
               _buildListHeader(),
               _buildList(),
@@ -162,4 +163,13 @@ class _HomeViewState extends State<HomeView> {
       _selectedFilter = filter == FilterEnum.defaultOrder ? null : filter;
     });
   }
+
+  Future<void> showCreateSheet(BuildContext context) =>
+      showModalBottomSheet<void>(
+        context: context,
+        useRootNavigator: true,
+        isScrollControlled: true,
+        useSafeArea: true,
+        builder: (_) => const CreateView(),
+      );
 }

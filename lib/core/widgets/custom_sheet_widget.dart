@@ -10,6 +10,8 @@ class CustomSheetWidget extends StatelessWidget {
     super.key,
     required this.content,
     this.title,
+    this.onClose,
+    this.isFullScreen = false,
     this.buttonText,
     this.onButtonPressed,
     this.isButtonDisabled = false,
@@ -17,7 +19,9 @@ class CustomSheetWidget extends StatelessWidget {
   });
 
   final Widget content;
+  final bool isFullScreen;
   final String? title;
+  final VoidCallback? onClose;
   final String? buttonText;
   final VoidCallback? onButtonPressed;
   final bool isButtonDisabled;
@@ -25,57 +29,77 @@ class CustomSheetWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom),
-      child: ConstrainedBox(
-        constraints: BoxConstraints(
-          maxHeight: MediaQuery.sizeOf(context).height * 0.9,
+    return LayoutBuilder(
+      builder: (context, constraints) => Padding(
+        padding: EdgeInsets.only(
+          bottom: MediaQuery.viewInsetsOf(context).bottom,
         ),
-        child: SafeArea(
-          top: false,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 12, bottom: 24),
-                child: Center(
-                  child: Container(
-                    width: 36,
-                    height: 4,
-                    decoration: BoxDecoration(
-                      color: context.color.disabled,
-                      borderRadius: BorderRadius.circular(2),
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: isFullScreen
+                ? constraints.maxHeight -
+                      MediaQuery.viewInsetsOf(context).bottom
+                : 0,
+            maxHeight: isFullScreen
+                ? double.infinity
+                : MediaQuery.sizeOf(context).height * 0.9,
+          ),
+          child: SafeArea(
+            top: false,
+            child: Column(
+              mainAxisSize: isFullScreen ? MainAxisSize.max : MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 12, bottom: 24),
+                  child: Center(
+                    child: Container(
+                      width: 36,
+                      height: 4,
+                      decoration: BoxDecoration(
+                        color: context.color.disabled,
+                        borderRadius: BorderRadius.circular(2),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Flexible(
-                child: SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      if (title != null)
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-                          child: Text(title!, style: context.typo.size20()),
+                if (title != null || onClose != null)
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 12, 16),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: title != null
+                              ? Text(title!, style: context.typo.size24())
+                              : const SizedBox.shrink(),
                         ),
-                      Padding(padding: contentPadding, child: content),
-                    ],
+                        if (onClose != null) CloseButton(onPressed: onClose),
+                      ],
+                    ),
+                  ),
+                Flexible(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Padding(padding: contentPadding, child: content),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              if (onButtonPressed != null)
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
-                  child: CustomButtonWidget(
-                    height: 42,
-                    text: buttonText ?? context.tr(LocaleKeys.home_sort_apply),
-                    onPressed: onButtonPressed,
-                    isDisabled: isButtonDisabled,
+                if (onButtonPressed != null)
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+                    child: CustomButtonWidget(
+                      height: 42,
+                      text:
+                          buttonText ?? context.tr(LocaleKeys.home_sort_apply),
+                      onPressed: onButtonPressed,
+                      isDisabled: isButtonDisabled,
+                    ),
                   ),
-                ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

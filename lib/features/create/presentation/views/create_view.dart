@@ -1,25 +1,19 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/locale_keys.g.dart';
-import '../../../../core/extensions/context_extension.dart';
+import '../../../../core/widgets/custom_sheet_widget.dart';
 
-@RoutePage()
+
+
 class CreateView extends StatelessWidget {
   const CreateView({super.key});
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: Text(context.tr(LocaleKeys.navigation_create))),
-    body: SafeArea(
-      child: Center(
-        child: Text(
-          context.tr(LocaleKeys.navigation_create),
-          style: context.typo.size24(weight: .w500),
-          textAlign: TextAlign.center,
-        ),
-      ),
-    ),
+  Widget build(BuildContext context) => CustomSheetWidget(
+    isFullScreen: true,
+    title: context.tr(LocaleKeys.navigation_create),
+    onClose: () => Navigator.of(context).pop(),
+    content: const SizedBox.shrink(),
   );
 }

@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 
 import '../../features/categories/presentation/views/categories_view.dart';
-import '../../features/create/presentation/views/create_view.dart';
 import '../../features/documents/presentation/views/documents_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/main/presentation/views/main_view.dart';
@@ -19,7 +18,6 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: SplashRoute.page, initial: true),
     AutoRoute(page: SearchRoute.page),
     AutoRoute(page: NotificationsRoute.page),
-    AutoRoute(page: CreateRoute.page),
     AutoRoute(
       page: MainRoute.page,
       children: [

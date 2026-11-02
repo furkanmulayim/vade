@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:vade/features/create/presentation/views/create_view.dart';
 
 import '../../../../app/router/app_router.dart';
 import '../widgets/main_bottom_navigation.dart';
@@ -20,7 +21,16 @@ class MainView extends StatelessWidget {
     bottomNavigationBuilder: (context, tabsRouter) => MainBottomNavigation(
       selectedIndex: tabsRouter.activeIndex,
       onSelected: tabsRouter.setActiveIndex,
-      onCreate: () => context.router.push(const CreateRoute()),
+      onCreate: () => showCreateSheet(context),
     ),
   );
+
+  Future<void> showCreateSheet(BuildContext context) =>
+      showModalBottomSheet<void>(
+        context: context,
+        useRootNavigator: true,
+        isScrollControlled: true,
+        useSafeArea: true,
+        builder: (_) => const CreateView(),
+      );
 }
