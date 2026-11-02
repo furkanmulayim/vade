@@ -45,9 +45,7 @@
         "one": "{count} 份文档",
         "other": "{count} 份文档"
     },
-    "home_sample_health_title": "私人医疗保险",
-    "home_sample_health_description": "补充医疗保险方案 (A)",
-    "home_sample_computer_description": "用于个人剪辑的电脑",
-    "home_sample_car_title": "现代汽车车损险",
-    "home_sample_car_description": "通过 Garanti 银行办理的保险"
+    "detail_title": "记录详情",
+    "detail_category": "类别",
+    "detail_due_date": "到期日期"
 }

@@ -38,8 +38,8 @@ abstract final class Palette {
   static const relaxBackDark = Color(0xFF24352B);
 
   //Upcoming
-  static const upcomingLight = Color(0xFFFA7319);
-  static const upcomingDark = Color(0xFFBC6F3B);
+  static const upcomingLight = Color(0xFFE5AD16);
+  static const upcomingDark = Color(0xFFE5B93F);
 
   static const upcomingBackLight = Color.fromARGB(255, 255, 251, 243);
   static const upcomingBackDark = Color(0xFF332D1F);

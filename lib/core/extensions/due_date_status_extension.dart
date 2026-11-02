@@ -19,16 +19,15 @@ extension DueDateStatusPresentation on DueDateStatus {
     ),
   };
 
-  Color color(PaletteColorsExtension colors) => switch (state) {
-    DueDateState.expired => colors.expired,
-    DueDateState.upcoming => days <= 7 ? colors.expired : colors.upcoming,
-    DueDateState.remaining => colors.relax,
+  Color color(PaletteColorsExtension colors) => switch (progress) {
+    >= 0.95 => colors.expired,
+    >= 0.75 => colors.upcoming,
+    _ => colors.relax,
   };
 
-  Color backgroundColor(PaletteColorsExtension colors) => switch (state) {
-    DueDateState.expired => colors.backExpired,
-    DueDateState.upcoming =>
-      days <= 7 ? colors.backExpired : colors.backUpcoming,
-    DueDateState.remaining => colors.backRelax,
+  Color backgroundColor(PaletteColorsExtension colors) => switch (progress) {
+    >= 0.95 => colors.backExpired,
+    >= 0.75 => colors.backUpcoming,
+    _ => colors.backRelax,
   };
 }

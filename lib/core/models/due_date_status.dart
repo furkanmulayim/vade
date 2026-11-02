@@ -9,12 +9,21 @@ class DueDateStatus {
     required this.progress,
   });
 
-  factory DueDateStatus.calculate(DateTime dueDate, {DateTime? now}) {
+  factory DueDateStatus.calculate(
+    DateTime dueDate, {
+    required DateTime startDate,
+    DateTime? now,
+  }) {
     final current = now ?? DateTime.now();
     final today = DateTime.utc(current.year, current.month, current.day);
     final due = DateTime.utc(dueDate.year, dueDate.month, dueDate.day);
     final days = due.difference(today).inDays;
-    final progress = (1 - days / 250).clamp(0.05, 1.0);
+    final start = DateTime.utc(startDate.year, startDate.month, startDate.day);
+    final totalDays = due.difference(start).inDays;
+    // A zero-length or reversed range completes on its end date.
+    final progress = totalDays <= 0
+        ? (days <= 0 ? 1.0 : 0.0)
+        : (today.difference(start).inDays / totalDays).clamp(0.0, 1.0);
 
     if (days < 0) {
       return DueDateStatus._(

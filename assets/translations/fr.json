@@ -45,9 +45,7 @@
         "one": "{count} document",
         "other": "{count} documents"
     },
-    "home_sample_health_title": "Assurance santé privée",
-    "home_sample_health_description": "Complémentaire santé formule (A)",
-    "home_sample_computer_description": "Mon ordinateur pour mes montages personnels",
-    "home_sample_car_title": "Assurance auto Hyundai",
-    "home_sample_car_description": "Assurance souscrite auprès de Garanti Bank"
+    "detail_title": "Détails du dossier",
+    "detail_category": "Catégorie",
+    "detail_due_date": "Date d’échéance"
 }

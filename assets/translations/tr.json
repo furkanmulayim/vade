@@ -45,9 +45,7 @@
         "one": "{count} Belge",
         "other": "{count} Belge"
     },
-    "home_sample_health_title": "Özel Sağlık Sigortası",
-    "home_sample_health_description": "Tamamlayıcı sağlık sigortası plan (A)",
-    "home_sample_computer_description": "Kişisel edit yaptığım bilgisayarım",
-    "home_sample_car_title": "Hyundai Kasko",
-    "home_sample_car_description": "Garanti bankası ile yapılan anlaşmalı sigorta"
+    "detail_title": "Kayıt detayı",
+    "detail_category": "Kategori",
+    "detail_due_date": "Vade tarihi"
 }

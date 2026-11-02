@@ -51,9 +51,7 @@
         "few": "{count} документа",
         "many": "{count} документов"
     },
-    "home_sample_health_title": "Частное медицинское страхование",
-    "home_sample_health_description": "Дополнительное медицинское страхование, план (A)",
-    "home_sample_computer_description": "Мой компьютер для личного монтажа",
-    "home_sample_car_title": "Каско Hyundai",
-    "home_sample_car_description": "Страховка, оформленная через Garanti Bank"
+    "detail_title": "Детали записи",
+    "detail_category": "Категория",
+    "detail_due_date": "Срок"
 }

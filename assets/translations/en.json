@@ -45,9 +45,7 @@
         "one": "{count} Document",
         "other": "{count} Documents"
     },
-    "home_sample_health_title": "Private Health Insurance",
-    "home_sample_health_description": "Supplementary health insurance plan (A)",
-    "home_sample_computer_description": "My computer for personal editing",
-    "home_sample_car_title": "Hyundai Car Insurance",
-    "home_sample_car_description": "Insurance arranged through Garanti Bank"
+    "detail_title": "Record details",
+    "detail_category": "Category",
+    "detail_due_date": "Due date"
 }

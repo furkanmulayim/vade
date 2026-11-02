@@ -45,9 +45,7 @@
         "one": "{count} Dokument",
         "other": "{count} Dokumente"
     },
-    "home_sample_health_title": "Private Krankenversicherung",
-    "home_sample_health_description": "Zusatzkrankenversicherung Tarif (A)",
-    "home_sample_computer_description": "Mein Computer für private Bearbeitungen",
-    "home_sample_car_title": "Hyundai Kaskoversicherung",
-    "home_sample_car_description": "Über die Garanti Bank abgeschlossene Versicherung"
+    "detail_title": "Eintragsdetails",
+    "detail_category": "Kategorie",
+    "detail_due_date": "Fälligkeitsdatum"
 }
