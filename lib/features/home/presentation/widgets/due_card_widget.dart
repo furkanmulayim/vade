@@ -8,6 +8,7 @@ import '../../../../core/extensions/due_date_status_extension.dart';
 import '../../../../core/models/due_date_status.dart';
 import '../../../../core/models/vade.dart';
 import '../../../../core/widgets/custom_icon_widget.dart';
+import '../../../../core/widgets/empty_card_widget.dart';
 
 class DueCardWidget extends StatelessWidget {
   const DueCardWidget({required this.vade, this.onTap, super.key});
@@ -21,27 +22,17 @@ class DueCardWidget extends StatelessWidget {
       vade.endDate,
       startDate: vade.startDate,
     );
-    final colors = context.color;
-
-    return Material(
-      color: colors.card,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-        side: BorderSide(color: colors.border),
-      ),
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: onTap,
-        splashColor: colors.textPrimary.withValues(alpha: 0.04),
-        highlightColor: colors.textPrimary.withValues(alpha: 0.04),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            _buildHeader(context, status),
-            const Divider(height: 1),
-            _buildDetails(context, status),
-          ],
-        ),
+    return EmptyCardWidget(
+      onTap: onTap,
+      padding: EdgeInsets.zero,
+      margin: EdgeInsets.zero,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _buildHeader(context, status),
+          const Divider(height: 1),
+          _buildDetails(context, status),
+        ],
       ),
     );
   }

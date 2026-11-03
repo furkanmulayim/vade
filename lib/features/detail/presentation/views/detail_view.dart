@@ -8,6 +8,7 @@ import '../../../../core/constants/locale_keys.g.dart';
 import '../../../../core/extensions/context_extension.dart';
 import '../../../../core/models/vade.dart';
 import '../../../../core/widgets/custom_button_widget.dart';
+import '../../../../core/widgets/empty_card_widget.dart';
 
 @RoutePage()
 class DetailView extends StatelessWidget {
@@ -25,8 +26,47 @@ class DetailView extends StatelessWidget {
           const SizedBox(width: 4),
         ],
       ),
-      body: Column(children: [const SizedBox(height: 16)]),
+      body: Column(children: [_buildHeader(context)]),
       bottomNavigationBar: _buildShareButton(context),
+    );
+  }
+
+  Widget _buildHeader(BuildContext context) {
+    return EmptyCardWidget(
+      child: Column(
+        spacing: 8,
+        children: [
+          Row(
+            spacing: 8,
+            children: [
+              CustomIconWidget(
+                path: AssetPath.navHome,
+                size: 20,
+                color: context.color.textPrimary,
+                border: true,
+              ),
+              Column(
+                crossAxisAlignment: .start,
+                children: [
+                  // TO DO 
+                  // Text(
+                  //   vade.name,
+                  //   style: context.typo.size14(weight: FontWeight.w600),
+                  // ),
+                  // if (vade.description.isNotEmpty)
+                  //   Text(
+                  //     vade.description,
+                  //     style: context.typo.size12(
+                  //       color: context.color.textSecondary,
+                  //     ),
+                  //   ),
+                ],
+              ),
+            ],
+          ),
+          Divider(),
+        ],
+      ),
     );
   }
 
