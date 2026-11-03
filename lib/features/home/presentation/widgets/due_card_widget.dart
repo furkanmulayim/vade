@@ -132,7 +132,7 @@ class DueCardWidget extends StatelessWidget {
           _buildDetailRow(
             context,
             icon: AssetPath.watch,
-            label: status.label(context),
+            label: status.label(),
             color: status.color(context.color),
           ),
           if (hasDocuments) ...[
@@ -140,8 +140,7 @@ class DueCardWidget extends StatelessWidget {
             _buildDetailRow(
               context,
               icon: AssetPath.navDocuments,
-              label: context.plural(
-                LocaleKeys.due_documents,
+              label: LocaleKeys.due_documents.plural(
                 vade.documentCount,
                 name: 'count',
               ),

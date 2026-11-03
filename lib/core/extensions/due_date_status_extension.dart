@@ -6,14 +6,13 @@ import '../models/due_date_status.dart';
 import '../theme/palette_colors_extension.dart';
 
 extension DueDateStatusPresentation on DueDateStatus {
-  String label(BuildContext context) => switch (state) {
-    DueDateState.expired => context.tr(LocaleKeys.due_expired),
+  String label() => switch (state) {
+    DueDateState.expired => LocaleKeys.due_expired.tr(),
     DueDateState.upcoming =>
       days == 0
-          ? context.tr(LocaleKeys.due_last_day)
-          : context.plural(LocaleKeys.due_days_left, days, name: 'count'),
-    DueDateState.remaining => context.plural(
-      LocaleKeys.due_months_left,
+          ? LocaleKeys.due_last_day.tr()
+          : LocaleKeys.due_days_left.plural(days, name: 'count'),
+    DueDateState.remaining => LocaleKeys.due_months_left.plural(
       months,
       name: 'count',
     ),

@@ -52,11 +52,11 @@ class DetailStatusCard extends StatelessWidget {
                   spacing: 4,
                   children: [
                     Text(
-                      context.tr(LocaleKeys.detail_remaining),
+                      LocaleKeys.detail_remaining.tr(),
                       style: context.typo.size13(color: colors.textSecondary),
                     ),
                     Text(
-                      status.label(context),
+                      status.label(),
                       style: context.typo.size18(
                         color: statusColor,
                         weight: FontWeight.w600,
@@ -74,7 +74,7 @@ class DetailStatusCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(4),
             color: statusColor,
             backgroundColor: colors.border,
-            semanticsLabel: context.tr(LocaleKeys.detail_elapsed),
+            semanticsLabel: LocaleKeys.detail_elapsed.tr(),
           ),
         ],
       ),

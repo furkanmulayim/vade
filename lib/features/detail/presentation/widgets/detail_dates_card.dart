@@ -26,7 +26,7 @@ class DetailDatesCard extends StatelessWidget {
         children: [
           _buildDateRow(
             context,
-            label: context.tr(LocaleKeys.detail_start_date),
+            label: LocaleKeys.detail_start_date.tr(),
             value: dateFormat.format(startDate),
           ),
           const Padding(
@@ -35,7 +35,7 @@ class DetailDatesCard extends StatelessWidget {
           ),
           _buildDateRow(
             context,
-            label: context.tr(LocaleKeys.detail_end_date),
+            label: LocaleKeys.detail_end_date.tr(),
             value: dateFormat.format(endDate),
           ),
         ],

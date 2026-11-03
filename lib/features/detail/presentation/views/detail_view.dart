@@ -22,7 +22,7 @@ class DetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(context.tr(LocaleKeys.detail_title)),
+        title: Text(LocaleKeys.detail_title.tr()),
         actions: [
           IconButton(
             onPressed: null,
@@ -65,7 +65,7 @@ class DetailView extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
             child: CustomButtonWidget(
-              text: context.tr(LocaleKeys.detail_share),
+              text: LocaleKeys.detail_share.tr(),
               height: 48,
               isDisabled: true,
             ),
@@ -79,7 +79,7 @@ class DetailView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 4, top: 24, bottom: 10),
       child: Text(
-        context.tr(key),
+        key.tr(),
         style: context.typo.size12(color: context.color.textSecondary),
       ),
     );

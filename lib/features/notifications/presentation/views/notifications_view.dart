@@ -10,9 +10,9 @@ class NotificationsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: Text(context.tr(LocaleKeys.home_notifications))),
+    appBar: AppBar(title: Text(LocaleKeys.home_notifications.tr())),
     body: SafeArea(
-      child: Center(child: Text(context.tr(LocaleKeys.home_notifications))),
+      child: Center(child: Text(LocaleKeys.home_notifications.tr())),
     ),
   );
 }

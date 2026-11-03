@@ -92,8 +92,7 @@ class CustomSheetWidget extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
                     child: CustomButtonWidget(
                       height: 42,
-                      text:
-                          buttonText ?? context.tr(LocaleKeys.home_sort_apply),
+                      text: buttonText ?? LocaleKeys.home_sort_apply.tr(),
                       onPressed: onButtonPressed,
                       isDisabled: isButtonDisabled,
                     ),

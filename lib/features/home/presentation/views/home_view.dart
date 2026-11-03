@@ -92,7 +92,7 @@ class _HomeViewState extends State<HomeView> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            context.tr(LocaleKeys.home_my_records),
+            LocaleKeys.home_my_records.tr(),
             style: context.typo.size12(color: color).copyWith(letterSpacing: 1),
           ),
           TextButton(
@@ -111,7 +111,7 @@ class _HomeViewState extends State<HomeView> {
               spacing: 4,
               children: [
                 Text(
-                  context.tr(_selectedFilter?.titleKey ?? LocaleKeys.home_sort),
+                  (_selectedFilter?.titleKey ?? LocaleKeys.home_sort).tr(),
                   style: context.typo.size12(color: sortColor),
                 ),
                 CustomIconWidget(

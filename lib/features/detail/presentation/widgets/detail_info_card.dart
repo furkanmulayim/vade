@@ -62,7 +62,7 @@ class DetailInfoCard extends StatelessWidget {
             spacing: 12,
             children: [
               Text(
-                context.tr(LocaleKeys.detail_category),
+                LocaleKeys.detail_category.tr(),
                 style: context.typo.size13(color: colors.textSecondary),
               ),
               const Spacer(),
@@ -89,7 +89,7 @@ class DetailInfoCard extends StatelessWidget {
                         ),
                         Flexible(
                           child: Text(
-                            context.tr(vade.category.titleKey),
+                            vade.category.titleKey.tr(),
                             style: context.typo.size13(
                               color: colors.textSecondary,
                             ),

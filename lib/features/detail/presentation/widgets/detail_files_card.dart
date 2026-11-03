@@ -33,17 +33,16 @@ class DetailFilesCard extends StatelessWidget {
               children: [
                 Text(
                   hasFiles
-                      ? context.plural(
-                          LocaleKeys.due_documents,
+                      ? LocaleKeys.due_documents.plural(
                           documentCount,
                           name: 'count',
                         )
-                      : context.tr(LocaleKeys.detail_no_files),
+                      : LocaleKeys.detail_no_files.tr(),
                   style: context.typo.size14(),
                 ),
                 if (hasFiles)
                   Text(
-                    context.tr(LocaleKeys.detail_files_unavailable),
+                    LocaleKeys.detail_files_unavailable.tr(),
                     style: context.typo.size13(color: colors.textSecondary),
                   ),
               ],

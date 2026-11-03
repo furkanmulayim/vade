@@ -39,7 +39,7 @@ class CategoryTabBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   Tab _buildTab(BuildContext context, CategoryEnum? category) {
-    final title = context.tr(category?.titleKey ?? LocaleKeys.category_all);
+    final title = (category?.titleKey ?? LocaleKeys.category_all).tr();
     final icon = category?.icon;
 
     return Tab(

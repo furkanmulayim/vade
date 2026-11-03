@@ -43,7 +43,7 @@ class MainBottomNavigation extends StatelessWidget {
             return Expanded(
               child: _NavigationItem(
                 icon: icon,
-                label: context.tr(label),
+                label: label.tr(),
                 selected: icon != null && selectedIndex == tabIndex,
                 onTap: icon == null ? onCreate : () => onSelected(tabIndex),
               ),
