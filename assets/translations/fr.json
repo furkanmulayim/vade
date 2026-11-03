@@ -47,5 +47,16 @@
     },
     "detail_title": "Détails du dossier",
     "detail_category": "Catégorie",
-    "detail_due_date": "Date d’échéance"
+    "detail_due_date": "Date d’échéance",
+    "detail_remaining": "Temps restant",
+    "detail_elapsed": "Temps écoulé",
+    "detail_dates": "DATES",
+    "detail_start_date": "Date de début",
+    "detail_end_date": "Date de fin",
+    "detail_files": "FICHIERS",
+    "detail_no_files": "Aucun fichier ajouté",
+    "detail_files_unavailable": "Les détails des fichiers ne sont pas encore disponibles.",
+    "detail_share": "Partager",
+    "detail_edit_unavailable": "La modification n’est pas encore disponible",
+    "detail_share_unavailable": "Le partage n’est pas encore disponible"
 }

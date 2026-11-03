@@ -47,5 +47,16 @@
     },
     "detail_title": "记录详情",
     "detail_category": "类别",
-    "detail_due_date": "到期日期"
+    "detail_due_date": "到期日期",
+    "detail_remaining": "剩余时间",
+    "detail_elapsed": "已过时间",
+    "detail_dates": "日期信息",
+    "detail_start_date": "开始日期",
+    "detail_end_date": "结束日期",
+    "detail_files": "文件",
+    "detail_no_files": "尚未添加文件",
+    "detail_files_unavailable": "文件详情暂不可用。",
+    "detail_share": "分享",
+    "detail_edit_unavailable": "编辑功能暂不可用",
+    "detail_share_unavailable": "分享功能暂不可用"
 }

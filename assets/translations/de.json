@@ -47,5 +47,16 @@
     },
     "detail_title": "Eintragsdetails",
     "detail_category": "Kategorie",
-    "detail_due_date": "Fälligkeitsdatum"
+    "detail_due_date": "Fälligkeitsdatum",
+    "detail_remaining": "Verbleibende Zeit",
+    "detail_elapsed": "Vergangene Zeit",
+    "detail_dates": "DATUMSANGABEN",
+    "detail_start_date": "Startdatum",
+    "detail_end_date": "Enddatum",
+    "detail_files": "DATEIEN",
+    "detail_no_files": "Noch keine Dateien hinzugefügt",
+    "detail_files_unavailable": "Dateidetails sind noch nicht verfügbar.",
+    "detail_share": "Teilen",
+    "detail_edit_unavailable": "Bearbeiten ist noch nicht verfügbar",
+    "detail_share_unavailable": "Teilen ist noch nicht verfügbar"
 }

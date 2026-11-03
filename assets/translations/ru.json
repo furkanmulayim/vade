@@ -53,5 +53,16 @@
     },
     "detail_title": "Детали записи",
     "detail_category": "Категория",
-    "detail_due_date": "Срок"
+    "detail_due_date": "Срок",
+    "detail_remaining": "Оставшееся время",
+    "detail_elapsed": "Прошедшее время",
+    "detail_dates": "ДАТЫ",
+    "detail_start_date": "Дата начала",
+    "detail_end_date": "Дата окончания",
+    "detail_files": "ФАЙЛЫ",
+    "detail_no_files": "Файлы ещё не добавлены",
+    "detail_files_unavailable": "Сведения о файлах пока недоступны.",
+    "detail_share": "Поделиться",
+    "detail_edit_unavailable": "Редактирование пока недоступно",
+    "detail_share_unavailable": "Отправка пока недоступна"
 }

@@ -53,7 +53,7 @@ class _FilterWidgetState extends State<FilterWidget> {
       child: InkWell(
         onTap: () => _selectFilter(filter),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
           child: Row(
             spacing: 8,
             children: [
