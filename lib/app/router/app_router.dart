@@ -1,6 +1,9 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 
+import '../../core/models/vade.dart';
 import '../../features/categories/presentation/views/categories_view.dart';
+import '../../features/detail/presentation/views/detail_view.dart';
 import '../../features/documents/presentation/views/documents_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/main/presentation/views/main_view.dart';
@@ -17,6 +20,7 @@ class AppRouter extends RootStackRouter {
   List<AutoRoute> get routes => [
     AutoRoute(page: SplashRoute.page, initial: true),
     AutoRoute(page: SearchRoute.page),
+    AutoRoute(page: DetailRoute.page),
     AutoRoute(page: NotificationsRoute.page),
     AutoRoute(
       page: MainRoute.page,

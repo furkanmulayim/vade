@@ -26,7 +26,7 @@ class _FilterWidgetState extends State<FilterWidget> {
   @override
   Widget build(BuildContext context) {
     return CustomSheetWidget(
-      title: context.tr(LocaleKeys.home_sort),
+      title: LocaleKeys.home_sort.tr(),
       onButtonPressed: () => Navigator.pop(context, _selected),
       isButtonDisabled: _selected == widget.selected,
       content: RadioGroup<FilterEnum>(
@@ -53,7 +53,7 @@ class _FilterWidgetState extends State<FilterWidget> {
       child: InkWell(
         onTap: () => _selectFilter(filter),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
           child: Row(
             spacing: 8,
             children: [
@@ -65,7 +65,7 @@ class _FilterWidgetState extends State<FilterWidget> {
               ),
               Expanded(
                 child: Text(
-                  context.tr(filter.titleKey),
+                  filter.titleKey.tr(),
                   style: context.typo.size14(
                     color: isSelected ? colors.primary : colors.textSecondary,
                   ),

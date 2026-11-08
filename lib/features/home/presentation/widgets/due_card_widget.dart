@@ -6,51 +6,33 @@ import '../../../../core/constants/locale_keys.g.dart';
 import '../../../../core/extensions/context_extension.dart';
 import '../../../../core/extensions/due_date_status_extension.dart';
 import '../../../../core/models/due_date_status.dart';
+import '../../../../core/models/vade.dart';
 import '../../../../core/widgets/custom_icon_widget.dart';
-import '../../../categories/domain/enums/category_enum.dart';
+import '../../../../core/widgets/empty_card_widget.dart';
 
 class DueCardWidget extends StatelessWidget {
-  const DueCardWidget({
-    required this.dueDate,
-    required this.title,
-    required this.description,
-    required this.documentCount,
-    required this.category,
-    this.onTap,
-    super.key,
-  }) : assert(documentCount >= 0);
+  const DueCardWidget({required this.vade, this.onTap, super.key});
 
-  final DateTime dueDate;
-  final String title;
-  final String description;
-  final int documentCount;
-  final CategoryEnum category;
+  final Vade vade;
   final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
-    final status = DueDateStatus.calculate(dueDate);
-    final colors = context.color;
-
-    return Material(
-      color: colors.card,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-        side: BorderSide(color: colors.border),
-      ),
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: onTap,
-        splashColor: colors.textPrimary.withValues(alpha: 0.04),
-        highlightColor: colors.textPrimary.withValues(alpha: 0.04),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            _buildHeader(context, status),
-            const Divider(height: 1),
-            _buildDetails(context, status),
-          ],
-        ),
+    final status = DueDateStatus.calculate(
+      vade.endDate,
+      startDate: vade.startDate,
+    );
+    return EmptyCardWidget(
+      onTap: onTap,
+      padding: EdgeInsets.zero,
+      margin: EdgeInsets.zero,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _buildHeader(context, status),
+          const Divider(height: 1),
+          _buildDetails(context, status),
+        ],
       ),
     );
   }
@@ -70,13 +52,13 @@ class DueCardWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  title,
+                  vade.name,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: context.typo.size16(),
                 ),
                 Text(
-                  description,
+                  vade.description,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: context.typo.size13(color: colors.textSecondary),
@@ -116,7 +98,7 @@ class DueCardWidget extends StatelessWidget {
             backgroundColor: colors.border,
           ),
           CustomIconWidget(
-            path: category.icon,
+            path: vade.iconPath,
             size: 18,
             color: colors.textPrimary,
           ),
@@ -126,9 +108,12 @@ class DueCardWidget extends StatelessWidget {
   }
 
   Widget _buildDetails(BuildContext context, DueDateStatus status) {
-    final date = DateFormat('d MMM', context.locale.toString()).format(dueDate);
+    final date = DateFormat(
+      'd MMM',
+      context.locale.toString(),
+    ).format(vade.endDate);
 
-    final hasDocuments = documentCount > 0;
+    final hasDocuments = vade.documentCount > 0;
 
     return IntrinsicHeight(
       child: Row(
@@ -138,7 +123,7 @@ class DueCardWidget extends StatelessWidget {
           _buildDetailRow(
             context,
             icon: AssetPath.watch,
-            label: status.label(context),
+            label: status.label(),
             color: status.color(context.color),
           ),
           if (hasDocuments) ...[
@@ -146,9 +131,8 @@ class DueCardWidget extends StatelessWidget {
             _buildDetailRow(
               context,
               icon: AssetPath.navDocuments,
-              label: context.plural(
-                LocaleKeys.due_documents,
-                documentCount,
+              label: LocaleKeys.due_documents.plural(
+                vade.documentCount,
                 name: 'count',
               ),
             ),

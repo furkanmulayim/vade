@@ -14,7 +14,7 @@ class DocumentsView extends StatelessWidget {
     body: SafeArea(
       child: Center(
         child: Text(
-          context.tr(LocaleKeys.navigation_documents),
+          LocaleKeys.navigation_documents.tr(),
           style: context.typo.size24(weight: .w500),
           textAlign: TextAlign.center,
         ),

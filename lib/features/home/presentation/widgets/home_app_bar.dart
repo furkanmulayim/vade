@@ -33,12 +33,12 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         _buildAction(
           iconPath: AssetPath.search,
-          tooltip: context.tr(LocaleKeys.home_search),
+          tooltip: LocaleKeys.home_search.tr(),
           onPressed: onSearch,
         ),
         _buildAction(
           iconPath: AssetPath.notification,
-          tooltip: context.tr(LocaleKeys.home_notifications),
+          tooltip: LocaleKeys.home_notifications.tr(),
           onPressed: onNotifications,
         ),
         const SizedBox(width: 8),
@@ -81,7 +81,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       spacing: 2,
       children: [
         Text(
-          context.tr(LocaleKeys.home_welcome),
+          LocaleKeys.home_welcome.tr(),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           style: context.typo.size18(),

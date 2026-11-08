@@ -37,6 +37,7 @@ abstract final class WidgetThemes {
       AppBarThemeData(
         backgroundColor: colors.card,
         surfaceTintColor: Colors.transparent,
+        titleTextStyle: TextStyles(colors).size21(),
         elevation: 0,
         scrolledUnderElevation: 0,
         toolbarHeight: 64,

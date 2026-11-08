@@ -45,9 +45,18 @@
         "one": "{count} Belge",
         "other": "{count} Belge"
     },
-    "home_sample_health_title": "Özel Sağlık Sigortası",
-    "home_sample_health_description": "Tamamlayıcı sağlık sigortası plan (A)",
-    "home_sample_computer_description": "Kişisel edit yaptığım bilgisayarım",
-    "home_sample_car_title": "Hyundai Kasko",
-    "home_sample_car_description": "Garanti bankası ile yapılan anlaşmalı sigorta"
+    "detail_title": "Kayıt detayı",
+    "detail_category": "Kategori",
+    "detail_due_date": "Vade tarihi",
+    "detail_remaining": "Kalan süre",
+    "detail_elapsed": "Geçen süre",
+    "detail_dates": "TARİH BİLGİLERİ",
+    "detail_start_date": "Başlangıç tarihi",
+    "detail_end_date": "Bitiş tarihi",
+    "detail_files": "DOSYALAR",
+    "detail_no_files": "Henüz dosya eklenmemiş",
+    "detail_files_unavailable": "Dosya ayrıntıları henüz mevcut değil.",
+    "detail_share": "Paylaş",
+    "detail_edit_unavailable": "Düzenleme henüz kullanılamıyor",
+    "detail_share_unavailable": "Paylaşım henüz kullanılamıyor"
 }

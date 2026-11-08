@@ -3,13 +3,14 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../app/router/app_router.dart';
-import '../../../create/presentation/views/create_view.dart';
 import '../../../../core/constants/asset_path.dart';
 import '../../../../core/constants/locale_keys.g.dart';
 import '../../../../core/extensions/context_extension.dart';
+import '../../../../core/models/vade.dart';
 import '../../../../core/widgets/custom_icon_widget.dart';
 import '../../../categories/domain/enums/category_enum.dart';
 import '../../../categories/presentation/widgets/category_tab_bar.dart';
+import '../../../create/presentation/views/create_view.dart';
 import '../../domain/enums/filter_enum.dart';
 import '../widgets/due_card_widget.dart';
 import '../widgets/filter_widget.dart';
@@ -30,6 +31,8 @@ class _HomeViewState extends State<HomeView> {
 
   @override
   Widget build(BuildContext context) {
+    final records = _filterRecords(_getSampleRecords());
+
     return Scaffold(
       appBar: HomeAppBar(
         nameCode: 'FM',
@@ -52,10 +55,10 @@ class _HomeViewState extends State<HomeView> {
                 totalCount: 80,
                 upcomingCount: 23,
                 expiredCount: 12,
-                onCreate: () => showCreateSheet(context),
+                onCreate: _showCreateSheet,
               ),
               _buildListHeader(),
-              _buildList(),
+              _buildRecordsList(records),
             ],
           ),
         ),
@@ -63,43 +66,19 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
-  Widget _buildList() {
-    return Column(
-      spacing: 8,
-      children: [
-        DueCardWidget(
-          category: CategoryEnum.health,
-          title: context.tr(LocaleKeys.home_sample_health_title),
-          description: context.tr(LocaleKeys.home_sample_health_description),
-          dueDate: DateTime(2027, 5, 5),
-          documentCount: 0,
-          onTap: () {},
-        ),
-        DueCardWidget(
-          category: CategoryEnum.electronics,
-          title: 'MacBook Air M2',
-          description: context.tr(LocaleKeys.home_sample_computer_description),
-          dueDate: DateTime(2026, 11, 21),
-          documentCount: 2,
-          onTap: () {},
-        ),
-        DueCardWidget(
-          category: CategoryEnum.vehicleAndTransport,
-          title: context.tr(LocaleKeys.home_sample_car_title),
-          description: context.tr(LocaleKeys.home_sample_car_description),
-          dueDate: DateTime(2026, 10, 30),
-          documentCount: 0,
-          onTap: () {},
-        ),
-        DueCardWidget(
-          category: CategoryEnum.vehicleAndTransport,
-          title: context.tr(LocaleKeys.home_sample_car_title),
-          description: context.tr(LocaleKeys.home_sample_car_description),
-          dueDate: DateTime(2026, 10, 30),
-          documentCount: 0,
-          onTap: () {},
-        ),
-      ],
+  Widget _buildRecordsList(List<Vade> records) {
+    return ListView.separated(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: records.length,
+      separatorBuilder: (_, _) => const SizedBox(height: 8),
+      itemBuilder: (context, index) {
+        final vade = records[index];
+        return DueCardWidget(
+          vade: vade,
+          onTap: () => context.router.push(DetailRoute(vade: vade)),
+        );
+      },
     );
   }
 
@@ -113,7 +92,7 @@ class _HomeViewState extends State<HomeView> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            context.tr(LocaleKeys.home_my_records),
+            LocaleKeys.home_my_records.tr(),
             style: context.typo.size12(color: color).copyWith(letterSpacing: 1),
           ),
           TextButton(
@@ -132,7 +111,7 @@ class _HomeViewState extends State<HomeView> {
               spacing: 4,
               children: [
                 Text(
-                  context.tr(_selectedFilter?.titleKey ?? LocaleKeys.home_sort),
+                  (_selectedFilter?.titleKey ?? LocaleKeys.home_sort).tr(),
                   style: context.typo.size12(color: sortColor),
                 ),
                 CustomIconWidget(
@@ -146,6 +125,12 @@ class _HomeViewState extends State<HomeView> {
         ],
       ),
     );
+  }
+
+  // todo Viewmodel'e tasınacak
+  List<Vade> _filterRecords(List<Vade> records) {
+    if (_selectedCategory == null) return records;
+    return records.where((vade) => vade.category == _selectedCategory).toList();
   }
 
   Future<void> _showFilter() async {
@@ -164,12 +149,59 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
-  Future<void> showCreateSheet(BuildContext context) =>
-      showModalBottomSheet<void>(
-        context: context,
-        useRootNavigator: true,
-        isScrollControlled: true,
-        useSafeArea: true,
-        builder: (_) => const CreateView(),
-      );
+  Future<void> _showCreateSheet() {
+    return showModalBottomSheet<void>(
+      context: context,
+      useRootNavigator: true,
+      isScrollControlled: true,
+      useSafeArea: true,
+      builder: (_) => const CreateView(),
+    );
+  }
+
+  // todo gerçek veriler gelince temizlenecek
+  List<Vade> _getSampleRecords() {
+    return [
+      Vade(
+        id: 'sample-1',
+        category: CategoryEnum.electronics,
+        iconPath: CategoryEnum.electronics.icon,
+        name: 'Özel Sağlık Sigortası',
+        description: 'Tamamlayıcı sağlık sigortası plan (A)',
+        startDate: DateTime(2026, 1, 1),
+        endDate: DateTime(2027, 5, 5),
+        documentCount: 0,
+      ),
+      Vade(
+        id: 'sample-2',
+        category: CategoryEnum.homeLiving,
+        iconPath: CategoryEnum.homeLiving.icon,
+        name: 'MacBook Air M2',
+        description: 'Kişisel edit yaptığım bilgisayarım',
+        startDate: DateTime(2026, 1, 1),
+        endDate: DateTime(2026, 11, 21),
+        documentCount: 2,
+      ),
+      Vade(
+        id: 'sample-3',
+        category: CategoryEnum.homeLiving,
+        iconPath: CategoryEnum.homeLiving.icon,
+        name: 'Hyundai Kasko',
+        description: 'Garanti bankası ile yapılan anlaşmalı sigorta',
+        startDate: DateTime(2026, 1, 1),
+        endDate: DateTime(2026, 10, 30),
+        documentCount: 0,
+      ),
+      Vade(
+        id: 'sample-4',
+        category: CategoryEnum.education,
+        iconPath: CategoryEnum.education.icon,
+        name: 'Hyundai Kasko',
+        description: 'Garanti bankası ile yapılan anlaşmalı sigorta',
+        startDate: DateTime(2026, 1, 1),
+        endDate: DateTime(2026, 10, 30),
+        documentCount: 0,
+      ),
+    ];
+  }
 }

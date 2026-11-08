@@ -47,13 +47,13 @@ class StatusCardWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                context.tr(LocaleKeys.home_quick_record),
+                LocaleKeys.home_quick_record.tr(),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: context.typo.size14(),
               ),
               Text(
-                context.tr(LocaleKeys.home_quick_record_description),
+                LocaleKeys.home_quick_record_description.tr(),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: context.typo.size12(color: colors.textSecondary),
@@ -62,7 +62,7 @@ class StatusCardWidget extends StatelessWidget {
           ),
         ),
         CustomButtonWidget(
-          text: context.tr(LocaleKeys.home_new_record),
+          text: LocaleKeys.home_new_record.tr(),
           onPressed: onCreate,
         ),
       ],
@@ -77,14 +77,14 @@ class StatusCardWidget extends StatelessWidget {
         children: [
           _buildStatistic(
             context,
-            title: context.tr(LocaleKeys.home_total),
+            title: LocaleKeys.home_total.tr(),
             count: totalCount,
             iconPath: AssetPath.check,
           ),
           VerticalDivider(width: 1, color: colors.border),
           _buildStatistic(
             context,
-            title: context.tr(LocaleKeys.home_upcoming),
+            title: LocaleKeys.home_upcoming.tr(),
             count: upcomingCount,
             iconPath: AssetPath.watch,
             iconColor: colors.upcoming,
@@ -92,7 +92,7 @@ class StatusCardWidget extends StatelessWidget {
           VerticalDivider(width: 1, color: colors.border),
           _buildStatistic(
             context,
-            title: context.tr(LocaleKeys.home_expired),
+            title: LocaleKeys.home_expired.tr(),
             count: expiredCount,
             iconPath: AssetPath.alert,
             iconColor: colors.expired,

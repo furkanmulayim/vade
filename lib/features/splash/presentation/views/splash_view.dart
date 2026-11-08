@@ -51,7 +51,7 @@ class _SplashViewState extends State<SplashView> {
             ),
             const SizedBox(height: 16),
             Text(
-              context.tr(LocaleKeys.name),
+              LocaleKeys.name.tr(),
               style: context.typo.size24(
                 color: context.color.onPrimary,
                 weight: .w700,

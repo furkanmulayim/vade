@@ -4,15 +4,13 @@ import 'package:flutter/material.dart';
 import '../../../../core/constants/locale_keys.g.dart';
 import '../../../../core/widgets/custom_sheet_widget.dart';
 
-
-
 class CreateView extends StatelessWidget {
   const CreateView({super.key});
 
   @override
   Widget build(BuildContext context) => CustomSheetWidget(
     isFullScreen: true,
-    title: context.tr(LocaleKeys.navigation_create),
+    title: LocaleKeys.navigation_create.tr(),
     onClose: () => Navigator.of(context).pop(),
     content: const SizedBox.shrink(),
   );

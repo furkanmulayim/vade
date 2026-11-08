@@ -45,9 +45,18 @@
         "one": "{count} Document",
         "other": "{count} Documents"
     },
-    "home_sample_health_title": "Private Health Insurance",
-    "home_sample_health_description": "Supplementary health insurance plan (A)",
-    "home_sample_computer_description": "My computer for personal editing",
-    "home_sample_car_title": "Hyundai Car Insurance",
-    "home_sample_car_description": "Insurance arranged through Garanti Bank"
+    "detail_title": "Record details",
+    "detail_category": "Category",
+    "detail_due_date": "Due date",
+    "detail_remaining": "Time remaining",
+    "detail_elapsed": "Elapsed time",
+    "detail_dates": "DATES",
+    "detail_start_date": "Start date",
+    "detail_end_date": "End date",
+    "detail_files": "FILES",
+    "detail_no_files": "No files added yet",
+    "detail_files_unavailable": "File details are not available yet.",
+    "detail_share": "Share",
+    "detail_edit_unavailable": "Editing is not available yet",
+    "detail_share_unavailable": "Sharing is not available yet"
 }
