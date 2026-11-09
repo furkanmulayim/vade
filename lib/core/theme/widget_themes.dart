@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'palette_colors_extension.dart';
 import 'text_styles.dart';
@@ -33,16 +34,21 @@ abstract final class WidgetThemes {
       );
 
   // App Bar
-  static AppBarThemeData appBar(PaletteColorsExtension colors) =>
-      AppBarThemeData(
-        backgroundColor: colors.card,
-        surfaceTintColor: Colors.transparent,
-        titleTextStyle: TextStyles(colors).size21(),
-        elevation: 0,
-        scrolledUnderElevation: 0,
-        toolbarHeight: 64,
-        titleSpacing: 16,
-      );
+  static AppBarThemeData appBar(
+    PaletteColorsExtension colors, {
+    required Brightness brightness,
+  }) => AppBarThemeData(
+    systemOverlayStyle: brightness == Brightness.dark
+        ? SystemUiOverlayStyle.light
+        : SystemUiOverlayStyle.dark,
+    backgroundColor: colors.card,
+    surfaceTintColor: Colors.transparent,
+    titleTextStyle: TextStyles(colors).size21(),
+    elevation: 0,
+    scrolledUnderElevation: 0,
+    toolbarHeight: 64,
+    titleSpacing: 16,
+  );
 
   // Tab Bar
   static TabBarThemeData tabBar(PaletteColorsExtension colors) =>

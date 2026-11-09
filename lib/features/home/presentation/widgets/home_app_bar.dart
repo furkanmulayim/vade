@@ -1,3 +1,4 @@
+import 'package:blurred_overlay/blurred_overlay.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -21,12 +22,12 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   final PreferredSizeWidget? bottom;
 
   @override
-  Size get preferredSize =>
-      Size.fromHeight(64 + (bottom?.preferredSize.height ?? 0));
+  Size get preferredSize => BlurredAppBar(bottom: bottom).preferredSize;
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
+    return BlurredAppBar(
+      backgroundColor: context.color.card.withValues(alpha: 0.72),
       automaticallyImplyLeading: false,
       title: _buildTitle(context),
       bottom: bottom,

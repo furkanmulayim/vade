@@ -34,6 +34,7 @@ class _HomeViewState extends State<HomeView> {
     final records = _filterRecords(_getSampleRecords());
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: HomeAppBar(
         nameCode: 'FM',
         onSearch: () => context.router.push(const SearchRoute()),
@@ -45,21 +46,23 @@ class _HomeViewState extends State<HomeView> {
           },
         ),
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            spacing: 12,
-            children: [
-              StatusCardWidget(
-                totalCount: 80,
-                upcomingCount: 23,
-                expiredCount: 12,
-                onCreate: _showCreateSheet,
-              ),
-              _buildListHeader(),
-              _buildRecordsList(records),
-            ],
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              spacing: 12,
+              children: [
+                StatusCardWidget(
+                  totalCount: 80,
+                  upcomingCount: 23,
+                  expiredCount: 12,
+                  onCreate: _showCreateSheet,
+                ),
+                _buildListHeader(),
+                _buildRecordsList(records),
+              ],
+            ),
           ),
         ),
       ),
@@ -186,6 +189,26 @@ class _HomeViewState extends State<HomeView> {
         id: 'sample-3',
         category: CategoryEnum.homeLiving,
         iconPath: CategoryEnum.homeLiving.icon,
+        name: 'Hyundai Kasko',
+        description: 'Garanti bankası ile yapılan anlaşmalı sigorta',
+        startDate: DateTime(2026, 1, 1),
+        endDate: DateTime(2026, 10, 30),
+        documentCount: 0,
+      ),
+      Vade(
+        id: 'sample-4',
+        category: CategoryEnum.education,
+        iconPath: CategoryEnum.education.icon,
+        name: 'Hyundai Kasko',
+        description: 'Garanti bankası ile yapılan anlaşmalı sigorta',
+        startDate: DateTime(2026, 1, 1),
+        endDate: DateTime(2026, 10, 30),
+        documentCount: 0,
+      ),
+      Vade(
+        id: 'sample-4',
+        category: CategoryEnum.education,
+        iconPath: CategoryEnum.education.icon,
         name: 'Hyundai Kasko',
         description: 'Garanti bankası ile yapılan anlaşmalı sigorta',
         startDate: DateTime(2026, 1, 1),
