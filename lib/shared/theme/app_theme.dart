@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 
-import 'palette.dart';
-import 'palette_colors_extension.dart';
+import 'colors/app_colors.dart';
+import 'colors/app_colors_extension.dart';
 import 'widget_themes.dart';
 
 class AppTheme {
   static ThemeData get light {
-    const colors = PaletteColorsExtension(
-      primary: Palette.primary,
-      onPrimary: Palette.onPrimary,
-      surface: Palette.surfaceLight,
-      surfaceSheet: Palette.surfaceSheetLight,
-      card: Palette.cardLight,
-      textPrimary: Palette.textPrimaryLight,
-      textSecondary: Palette.textSecondaryLight,
-      border: Palette.borderLight,
-      disabled: Palette.disabledLight,
-      relax: Palette.relaxLight,
-      backRelax: Palette.relaxBackLight,
-      upcoming: Palette.upcomingLight,
-      backUpcoming: Palette.upcomingBackLight,
-      expired: Palette.expiredLight,
-      backExpired: Palette.expiredBackLight,
+    const colors = AppColorsExtension(
+      primary: AppColors.primary,
+      onPrimary: AppColors.onPrimary,
+      surface: AppColors.surfaceLight,
+      surfaceSheet: AppColors.surfaceSheetLight,
+      card: AppColors.cardLight,
+      textPrimary: AppColors.textPrimaryLight,
+      textSecondary: AppColors.textSecondaryLight,
+      border: AppColors.borderLight,
+      disabled: AppColors.disabledLight,
+      relax: AppColors.relaxLight,
+      backRelax: AppColors.relaxBackLight,
+      upcoming: AppColors.upcomingLight,
+      backUpcoming: AppColors.upcomingBackLight,
+      expired: AppColors.expiredLight,
+      backExpired: AppColors.expiredBackLight,
     );
     final scheme =
         ColorScheme.fromSeed(
@@ -56,22 +56,22 @@ class AppTheme {
   }
 
   static ThemeData get dark {
-    const colors = PaletteColorsExtension(
-      primary: Palette.primary,
-      onPrimary: Palette.onPrimary,
-      surface: Palette.surfaceDark,
-      surfaceSheet: Palette.surfaceSheetDark,
-      card: Palette.cardDark,
-      textPrimary: Palette.textPrimaryDark,
-      textSecondary: Palette.textSecondaryDark,
-      border: Palette.borderDark,
-      disabled: Palette.disabledDark,
-      relax: Palette.relaxDark,
-      backRelax: Palette.relaxBackDark,
-      upcoming: Palette.upcomingDark,
-      backUpcoming: Palette.upcomingBackDark,
-      expired: Palette.expiredDark,
-      backExpired: Palette.expiredBackDark,
+    const colors = AppColorsExtension(
+      primary: AppColors.primary,
+      onPrimary: AppColors.onPrimary,
+      surface: AppColors.surfaceDark,
+      surfaceSheet: AppColors.surfaceSheetDark,
+      card: AppColors.cardDark,
+      textPrimary: AppColors.textPrimaryDark,
+      textSecondary: AppColors.textSecondaryDark,
+      border: AppColors.borderDark,
+      disabled: AppColors.disabledDark,
+      relax: AppColors.relaxDark,
+      backRelax: AppColors.relaxBackDark,
+      upcoming: AppColors.upcomingDark,
+      backUpcoming: AppColors.upcomingBackDark,
+      expired: AppColors.expiredDark,
+      backExpired: AppColors.expiredBackDark,
     );
     final scheme =
         ColorScheme.fromSeed(

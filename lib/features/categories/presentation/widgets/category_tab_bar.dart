@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/locale_keys.g.dart';
-import '../../../../core/widgets/custom_icon_widget.dart';
-import '../../domain/enums/category_enum.dart';
+import '../../../../shared/constants/locale_keys.g.dart';
+import '../../../../shared/widgets/custom_icon_widget.dart';
+import '../../../../shared/enums/category_enum.dart';
 
 class CategoryTabBar extends StatelessWidget implements PreferredSizeWidget {
   const CategoryTabBar({

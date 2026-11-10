@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract final class Palette {
+abstract final class AppColors {
   //Primary
   static const primary = Color(0xFFFA7319);
   static const onPrimary = Colors.white;

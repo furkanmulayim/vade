@@ -4,9 +4,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../app/router/app_router.dart';
-import '../../../../core/constants/locale_keys.g.dart';
-import '../../../../core/extensions/context_extension.dart';
+import '../../app/router/app_router.dart';
+import '../../shared/constants/locale_keys.g.dart';
+import '../../shared/extensions/context_extension.dart';
 
 @RoutePage()
 class SplashView extends StatefulWidget {

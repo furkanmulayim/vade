@@ -1,14 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:vade/core/constants/asset_path.dart';
-import 'package:vade/core/widgets/custom_icon_widget.dart';
+import 'package:vade/shared/constants/asset_path.dart';
+import 'package:vade/shared/widgets/custom_icon_widget.dart';
 
-import '../../../../core/constants/locale_keys.g.dart';
-import '../../../../core/extensions/context_extension.dart';
-import '../../../../core/models/vade.dart';
-import '../../../../core/widgets/custom_button_widget.dart';
-import '../../../../core/widgets/empty_card_widget.dart';
+import '../../shared/constants/locale_keys.g.dart';
+import '../../shared/extensions/context_extension.dart';
+import '../../core/models/vade.dart';
+import '../../shared/widgets/custom_button_widget.dart';
+import '../../shared/widgets/empty_card_widget.dart';
 
 @RoutePage()
 class DetailView extends StatelessWidget {

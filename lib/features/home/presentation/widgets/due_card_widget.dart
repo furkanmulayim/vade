@@ -1,14 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/asset_path.dart';
-import '../../../../core/constants/locale_keys.g.dart';
-import '../../../../core/extensions/context_extension.dart';
-import '../../../../core/extensions/due_date_status_extension.dart';
+import '../../../../shared/constants/asset_path.dart';
+import '../../../../shared/constants/locale_keys.g.dart';
+import '../../../../shared/extensions/context_extension.dart';
+import '../../../../shared/extensions/due_date_status_extension.dart';
 import '../../../../core/models/due_date_status.dart';
 import '../../../../core/models/vade.dart';
-import '../../../../core/widgets/custom_icon_widget.dart';
-import '../../../../core/widgets/empty_card_widget.dart';
+import '../../../../shared/widgets/custom_icon_widget.dart';
+import '../../../../shared/widgets/empty_card_widget.dart';
 
 class DueCardWidget extends StatelessWidget {
   const DueCardWidget({required this.vade, this.onTap, super.key});

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'palette_colors_extension.dart';
-import 'text_styles.dart';
+import 'colors/app_colors_extension.dart';
+import 'typography/app_text_styles.dart';
 
 /// Bileşen temalarını uygulamanın tema renkleriyle oluşturur.
 abstract final class WidgetThemes {
   // Bottom Sheet
-  static BottomSheetThemeData bottomSheet(PaletteColorsExtension colors) =>
+  static BottomSheetThemeData bottomSheet(AppColorsExtension colors) =>
       BottomSheetThemeData(
         backgroundColor: colors.surfaceSheet,
         modalBackgroundColor: colors.surfaceSheet,
@@ -19,11 +19,11 @@ abstract final class WidgetThemes {
       );
 
   // Text
-  static TextTheme textTheme(PaletteColorsExtension colors) =>
-      TextTheme(bodyMedium: TextStyles(colors).size14());
+  static TextTheme textTheme(AppColorsExtension colors) =>
+      TextTheme(bodyMedium: AppTextStyles(colors).size14());
 
   // Filled Button
-  static FilledButtonThemeData filledButton(PaletteColorsExtension colors) =>
+  static FilledButtonThemeData filledButton(AppColorsExtension colors) =>
       FilledButtonThemeData(
         style: FilledButton.styleFrom(
           backgroundColor: colors.primary,
@@ -35,7 +35,7 @@ abstract final class WidgetThemes {
 
   // App Bar
   static AppBarThemeData appBar(
-    PaletteColorsExtension colors, {
+    AppColorsExtension colors, {
     required Brightness brightness,
   }) => AppBarThemeData(
     systemOverlayStyle: brightness == Brightness.dark
@@ -43,7 +43,7 @@ abstract final class WidgetThemes {
         : SystemUiOverlayStyle.dark,
     backgroundColor: colors.card,
     surfaceTintColor: Colors.transparent,
-    titleTextStyle: TextStyles(colors).size21(),
+    titleTextStyle: AppTextStyles(colors).size21(),
     elevation: 0,
     scrolledUnderElevation: 0,
     toolbarHeight: 64,
@@ -51,20 +51,19 @@ abstract final class WidgetThemes {
   );
 
   // Tab Bar
-  static TabBarThemeData tabBar(PaletteColorsExtension colors) =>
-      TabBarThemeData(
-        tabAlignment: TabAlignment.start,
-        labelPadding: const EdgeInsets.symmetric(horizontal: 12),
-        labelColor: colors.primary,
-        unselectedLabelColor: colors.textSecondary,
-        labelStyle: TextStyles(colors).size14(weight: FontWeight.w600),
-        unselectedLabelStyle: TextStyles(colors).size14(),
-        indicatorColor: colors.primary,
-        dividerColor: colors.border,
-        splashFactory: NoSplash.splashFactory,
-        overlayColor: WidgetStateProperty.resolveWith<Color?>(
-          (states) =>
-              states.contains(WidgetState.pressed) ? Colors.transparent : null,
-        ),
-      );
+  static TabBarThemeData tabBar(AppColorsExtension colors) => TabBarThemeData(
+    tabAlignment: TabAlignment.start,
+    labelPadding: const EdgeInsets.symmetric(horizontal: 12),
+    labelColor: colors.primary,
+    unselectedLabelColor: colors.textSecondary,
+    labelStyle: AppTextStyles(colors).size14(weight: FontWeight.w600),
+    unselectedLabelStyle: AppTextStyles(colors).size14(),
+    indicatorColor: colors.primary,
+    dividerColor: colors.border,
+    splashFactory: NoSplash.splashFactory,
+    overlayColor: WidgetStateProperty.resolveWith<Color?>(
+      (states) =>
+          states.contains(WidgetState.pressed) ? Colors.transparent : null,
+    ),
+  );
 }

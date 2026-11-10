@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'palette_colors_extension.dart';
+import '../colors/app_colors_extension.dart';
 
 /// Urbanist, w500 ve temanın ana metin rengiyle 12–28 arası stiller.
-class TextStyles {
-  const TextStyles(this._colors);
+class AppTextStyles {
+  const AppTextStyles(this._colors);
 
-  final PaletteColorsExtension _colors;
+  final AppColorsExtension _colors;
 
   TextStyle _style(double size, {Color? color, FontWeight? weight}) {
     return TextStyle(

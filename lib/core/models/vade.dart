@@ -1,4 +1,4 @@
-import '../../features/categories/domain/enums/category_enum.dart';
+import '../../shared/enums/category_enum.dart';
 
 class Vade {
   const Vade({

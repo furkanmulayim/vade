@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../core/di/injection.dart';
 import '../core/providers/app_provider.dart';
-import '../core/theme/app_theme.dart';
+import '../shared/theme/app_theme.dart';
 import 'router/app_router.dart';
 
 class VadeApp extends StatefulWidget {

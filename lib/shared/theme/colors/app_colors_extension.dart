@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 @immutable
-class PaletteColorsExtension extends ThemeExtension<PaletteColorsExtension> {
-  const PaletteColorsExtension({
+class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
+  const AppColorsExtension({
     required this.primary,
     required this.onPrimary,
     required this.surface,
@@ -36,7 +36,7 @@ class PaletteColorsExtension extends ThemeExtension<PaletteColorsExtension> {
   final Color backExpired;
 
   @override
-  PaletteColorsExtension copyWith({
+  AppColorsExtension copyWith({
     Color? primary,
     Color? onPrimary,
     Color? surface,
@@ -55,7 +55,7 @@ class PaletteColorsExtension extends ThemeExtension<PaletteColorsExtension> {
     Color? backUpcoming,
     Color? expired,
     Color? backExpired,
-  }) => PaletteColorsExtension(
+  }) => AppColorsExtension(
     primary: primary ?? this.primary,
     onPrimary: onPrimary ?? this.onPrimary,
     surface: surface ?? this.surface,
@@ -74,12 +74,9 @@ class PaletteColorsExtension extends ThemeExtension<PaletteColorsExtension> {
   );
 
   @override
-  PaletteColorsExtension lerp(
-    covariant PaletteColorsExtension? other,
-    double t,
-  ) {
+  AppColorsExtension lerp(covariant AppColorsExtension? other, double t) {
     if (other == null) return this;
-    return PaletteColorsExtension(
+    return AppColorsExtension(
       primary: Color.lerp(primary, other.primary, t)!,
       onPrimary: Color.lerp(onPrimary, other.onPrimary, t)!,
       surface: Color.lerp(surface, other.surface, t)!,

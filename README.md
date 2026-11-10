@@ -33,7 +33,7 @@ dart run build_runner build --delete-conflicting-outputs
 Çeviri dosyalarını üretme:
 
 ```bash
-dart run easy_localization:generate -S assets/translations -O lib
+dart run easy_localization:generate -S assets/translations -O lib/shared/constants -o locale_keys.g.dart -f keys
 ```
 
 ## Test ve analiz

@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/locale_keys.g.dart';
-import '../../../../core/widgets/custom_sheet_widget.dart';
+import '../../shared/constants/locale_keys.g.dart';
+import '../../shared/widgets/custom_sheet_widget.dart';
 
 class CreateView extends StatelessWidget {
   const CreateView({super.key});

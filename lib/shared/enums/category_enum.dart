@@ -1,5 +1,5 @@
-import '../../../../core/constants/asset_path.dart';
-import '../../../../core/constants/locale_keys.g.dart';
+import '../constants/asset_path.dart';
+import '../constants/locale_keys.g.dart';
 
 enum CategoryEnum {
   electronics('electronics'), // Elektronik

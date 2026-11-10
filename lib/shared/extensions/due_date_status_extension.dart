@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/locale_keys.g.dart';
-import '../models/due_date_status.dart';
-import '../theme/palette_colors_extension.dart';
+import '../../core/models/due_date_status.dart';
+import '../theme/colors/app_colors_extension.dart';
 
 extension DueDateStatusPresentation on DueDateStatus {
   String label() => switch (state) {
@@ -18,13 +18,13 @@ extension DueDateStatusPresentation on DueDateStatus {
     ),
   };
 
-  Color color(PaletteColorsExtension colors) => switch (progress) {
+  Color color(AppColorsExtension colors) => switch (progress) {
     >= 0.95 => colors.expired,
     >= 0.75 => colors.upcoming,
     _ => colors.relax,
   };
 
-  Color backgroundColor(PaletteColorsExtension colors) => switch (progress) {
+  Color backgroundColor(AppColorsExtension colors) => switch (progress) {
     >= 0.95 => colors.backExpired,
     >= 0.75 => colors.backUpcoming,
     _ => colors.backRelax,

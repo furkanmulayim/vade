@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:vade/features/create/presentation/views/create_view.dart';
+import 'package:vade/features/create/create_view.dart';
 
 import '../../../../app/router/app_router.dart';
 import '../widgets/main_bottom_navigation.dart';

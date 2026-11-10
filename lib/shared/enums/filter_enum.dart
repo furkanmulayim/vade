@@ -1,4 +1,4 @@
-import '../../../../core/constants/locale_keys.g.dart';
+import '../constants/locale_keys.g.dart';
 
 enum FilterEnum {
   defaultOrder(LocaleKeys.home_sort_default),

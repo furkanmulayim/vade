@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 import '../../core/models/vade.dart';
 import '../../features/categories/presentation/views/categories_view.dart';
-import '../../features/detail/presentation/views/detail_view.dart';
-import '../../features/documents/presentation/views/documents_view.dart';
+import '../../features/detail/detail_view.dart';
+import '../../features/documents/documents_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/main/presentation/views/main_view.dart';
-import '../../features/notifications/presentation/views/notifications_view.dart';
-import '../../features/search/presentation/views/search_view.dart';
-import '../../features/settings/presentation/views/settings_view.dart';
-import '../../features/splash/presentation/views/splash_view.dart';
+import '../../features/notifications/notifications_view.dart';
+import '../../features/search/search_view.dart';
+import '../../features/settings/settings_view.dart';
+import '../../features/splash/splash_view.dart';
 
 part 'app_router.gr.dart';
 

@@ -2,10 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/locale_keys.g.dart';
-import '../../../../core/extensions/context_extension.dart';
-import '../../../../core/widgets/custom_sheet_widget.dart';
-import '../../domain/enums/filter_enum.dart';
+import '../../../../shared/constants/locale_keys.g.dart';
+import '../../../../shared/extensions/context_extension.dart';
+import '../../../../shared/widgets/custom_sheet_widget.dart';
+import '../../../../shared/enums/filter_enum.dart';
 
 class FilterWidget extends StatefulWidget {
   const FilterWidget({super.key, required this.selected});

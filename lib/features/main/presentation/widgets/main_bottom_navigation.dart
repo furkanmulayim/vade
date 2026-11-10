@@ -2,9 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../core/constants/asset_path.dart';
-import '../../../../core/constants/locale_keys.g.dart';
-import '../../../../core/extensions/context_extension.dart';
+import '../../../../shared/constants/asset_path.dart';
+import '../../../../shared/constants/locale_keys.g.dart';
+import '../../../../shared/extensions/context_extension.dart';
 
 class MainBottomNavigation extends StatelessWidget {
   const MainBottomNavigation({

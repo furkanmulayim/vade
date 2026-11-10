@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'app/app.dart';
-import 'app/app_localization.dart';
-import 'app/system_locale_sync.dart';
+import 'app/localization/app_localization.dart';
+import 'app/localization/system_locale_sync.dart';
 import 'core/di/injection.dart';
 
 Future<void> main() async {

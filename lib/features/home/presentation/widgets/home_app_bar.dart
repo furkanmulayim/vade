@@ -2,10 +2,10 @@ import 'package:blurred_overlay/blurred_overlay.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/asset_path.dart';
-import '../../../../core/constants/locale_keys.g.dart';
-import '../../../../core/extensions/context_extension.dart';
-import '../../../../core/widgets/custom_icon_widget.dart';
+import '../../../../shared/constants/asset_path.dart';
+import '../../../../shared/constants/locale_keys.g.dart';
+import '../../../../shared/extensions/context_extension.dart';
+import '../../../../shared/widgets/custom_icon_widget.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({
