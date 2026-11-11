@@ -7,12 +7,14 @@ class EmptyCardWidget extends StatelessWidget {
     super.key,
     this.child,
     this.onTap,
+    this.width = double.infinity,
     this.padding = const EdgeInsets.all(12),
     this.margin = const EdgeInsets.all(16),
   });
 
   final Widget? child;
   final VoidCallback? onTap;
+  final double? width;
   final EdgeInsetsGeometry padding;
   final EdgeInsetsGeometry margin;
 
@@ -23,7 +25,7 @@ class EmptyCardWidget extends StatelessWidget {
 
     if (onTap == null) {
       return Container(
-        width: double.infinity,
+        width: width,
         margin: margin,
         padding: padding,
         decoration: BoxDecoration(
@@ -49,7 +51,7 @@ class EmptyCardWidget extends StatelessWidget {
           splashColor: colors.textPrimary.withValues(alpha: 0.04),
           highlightColor: colors.textPrimary.withValues(alpha: 0.04),
           child: SizedBox(
-            width: double.infinity,
+            width: width,
             child: Padding(padding: padding, child: child),
           ),
         ),
