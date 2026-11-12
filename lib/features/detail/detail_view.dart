@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:blurred_overlay/blurred_overlay.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,9 @@ class DetailView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      extendBodyBehindAppBar: true,
+      appBar: BlurredAppBar(
+        backgroundColor: context.color.card.withValues(alpha: 0.72),
         title: Text(LocaleKeys.detail_title.tr()),
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.edit, size: 22)),
@@ -30,11 +33,19 @@ class DetailView extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.only(
+          top: MediaQuery.paddingOf(context).top + kToolbarHeight,
+        ),
         child: Column(
           children: [
             _buildHeader(context),
             _buildProgress(context),
             _buildDates(context),
+            _buildSection(
+              context,
+              title: 'HATIRLATMA',
+              child: _buildReminder(context),
+            ),
             _buildFiles(context),
           ],
         ),
@@ -191,16 +202,13 @@ class DetailView extends StatelessWidget {
   }
 
   Widget _buildFiles(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 20),
-      child: _buildSection(
+    return _buildSection(
+      context,
+      title: 'DOSYALAR',
+      child: _rowItem(
         context,
-        title: 'DOSYALAR',
-        child: _rowItem(
-          context,
-          iconPath: AssetPath.calendar,
-          title: 'Henüz dosya eklenmemiş!',
-        ),
+        iconPath: AssetPath.calendar,
+        title: 'Henüz dosya eklenmemiş!',
       ),
     );
   }
@@ -282,6 +290,70 @@ class DetailView extends StatelessWidget {
             onPressed: () {},
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildReminder(BuildContext context) {
+    var enabled = false;
+    var daysBefore = 1;
+
+    return StatefulBuilder(
+      builder: (context, setState) => Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Theme(
+            data: Theme.of(context).copyWith(
+              splashFactory: NoSplash.splashFactory,
+              highlightColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+            ),
+            child: Material(
+              type: MaterialType.transparency,
+              child: SwitchListTile.adaptive(
+                applyCupertinoTheme: false,
+                trackColor: Theme.of(context).switchTheme.trackColor,
+                contentPadding: EdgeInsets.zero,
+                title: Text(
+                  'Bana hatırlat',
+                  style: context.typo.size14(
+                    color: context.color.textSecondary,
+                  ),
+                ),
+                value: enabled,
+                onChanged: (value) => setState(() => enabled = value),
+              ),
+            ),
+          ),
+          if (enabled)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: Row(
+                spacing: 8,
+                children: [
+                  for (final days in [1, 3, 7])
+                    _buildReminderChip(
+                      days,
+                      daysBefore,
+                      () => setState(() => daysBefore = days),
+                    ),
+                ],
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildReminderChip(int days, int selectedDays, VoidCallback onTap) {
+    return Expanded(
+      child: ChoiceChip(
+        label: SizedBox(
+          width: double.infinity,
+          child: Text('$days gün önce', textAlign: TextAlign.center),
+        ),
+        selected: selectedDays == days,
+        onSelected: (_) => onTap(),
       ),
     );
   }
