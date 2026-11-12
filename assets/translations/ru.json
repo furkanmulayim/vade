@@ -64,5 +64,13 @@
     "detail_files_unavailable": "Сведения о файлах пока недоступны.",
     "detail_share": "Поделиться",
     "detail_edit_unavailable": "Редактирование пока недоступно",
-    "detail_share_unavailable": "Отправка пока недоступна"
+    "detail_share_unavailable": "Отправка пока недоступна",
+    "detail_reminder": "НАПОМИНАНИЕ",
+    "detail_remind_me": "Напомнить мне",
+    "detail_reminder_days_before": {
+        "one": "За {count} день",
+        "few": "За {count} дня",
+        "many": "За {count} дней",
+        "other": "За {count} дня"
+    }
 }

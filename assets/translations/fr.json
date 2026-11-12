@@ -58,5 +58,11 @@
     "detail_files_unavailable": "Les détails des fichiers ne sont pas encore disponibles.",
     "detail_share": "Partager",
     "detail_edit_unavailable": "La modification n’est pas encore disponible",
-    "detail_share_unavailable": "Le partage n’est pas encore disponible"
+    "detail_share_unavailable": "Le partage n’est pas encore disponible",
+    "detail_reminder": "RAPPEL",
+    "detail_remind_me": "Me rappeler",
+    "detail_reminder_days_before": {
+        "one": "{count} jour avant",
+        "other": "{count} jours avant"
+    }
 }

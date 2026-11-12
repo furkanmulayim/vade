@@ -43,7 +43,7 @@ class DetailView extends StatelessWidget {
             _buildDates(context),
             _buildSection(
               context,
-              title: 'HATIRLATMA',
+              title: LocaleKeys.detail_reminder.tr(),
               child: _buildReminder(context),
             ),
             _buildFiles(context),
@@ -165,7 +165,7 @@ class DetailView extends StatelessWidget {
             ],
           ),
           LinearProgressIndicator(
-            value: 1 - status.progress,
+            value: status.progress,
             minHeight: 8,
             borderRadius: .circular(8),
             backgroundColor: colors.border,
@@ -204,11 +204,11 @@ class DetailView extends StatelessWidget {
   Widget _buildFiles(BuildContext context) {
     return _buildSection(
       context,
-      title: 'DOSYALAR',
+      title: LocaleKeys.detail_files.tr(),
       child: _rowItem(
         context,
         iconPath: AssetPath.calendar,
-        title: 'Henüz dosya eklenmemiş!',
+        title: LocaleKeys.detail_no_files.tr(),
       ),
     );
   }
@@ -315,7 +315,7 @@ class DetailView extends StatelessWidget {
                 trackColor: Theme.of(context).switchTheme.trackColor,
                 contentPadding: EdgeInsets.zero,
                 title: Text(
-                  'Bana hatırlat',
+                  LocaleKeys.detail_remind_me.tr(),
                   style: context.typo.size14(
                     color: context.color.textSecondary,
                   ),
@@ -350,7 +350,10 @@ class DetailView extends StatelessWidget {
       child: ChoiceChip(
         label: SizedBox(
           width: double.infinity,
-          child: Text('$days gün önce', textAlign: TextAlign.center),
+          child: Text(
+            LocaleKeys.detail_reminder_days_before.plural(days, name: 'count'),
+            textAlign: TextAlign.center,
+          ),
         ),
         selected: selectedDays == days,
         onSelected: (_) => onTap(),

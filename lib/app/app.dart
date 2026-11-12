@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../core/di/injection.dart';
 import '../core/providers/app_provider.dart';
+import '../shared/constants/locale_keys.g.dart';
 import '../shared/theme/app_theme.dart';
 import 'router/app_router.dart';
 
@@ -22,7 +23,7 @@ class _VadeAppState extends State<VadeApp> {
     value: getIt<AppProvider>(),
     child: Builder(
       builder: (context) => MaterialApp.router(
-        title: 'Vade',
+        title: LocaleKeys.name.tr(),
         debugShowCheckedModeBanner: false,
         theme: AppTheme.light,
         darkTheme: AppTheme.dark,

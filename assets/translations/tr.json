@@ -58,5 +58,11 @@
     "detail_files_unavailable": "Dosya ayrıntıları henüz mevcut değil.",
     "detail_share": "Paylaş",
     "detail_edit_unavailable": "Düzenleme henüz kullanılamıyor",
-    "detail_share_unavailable": "Paylaşım henüz kullanılamıyor"
+    "detail_share_unavailable": "Paylaşım henüz kullanılamıyor",
+    "detail_reminder": "HATIRLATMA",
+    "detail_remind_me": "Bana hatırlat",
+    "detail_reminder_days_before": {
+        "one": "{count} gün önce",
+        "other": "{count} gün önce"
+    }
 }

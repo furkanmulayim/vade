@@ -58,5 +58,10 @@
     "detail_files_unavailable": "文件详情暂不可用。",
     "detail_share": "分享",
     "detail_edit_unavailable": "编辑功能暂不可用",
-    "detail_share_unavailable": "分享功能暂不可用"
+    "detail_share_unavailable": "分享功能暂不可用",
+    "detail_reminder": "提醒",
+    "detail_remind_me": "提醒我",
+    "detail_reminder_days_before": {
+        "other": "提前 {count} 天"
+    }
 }

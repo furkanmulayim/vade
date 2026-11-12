@@ -58,5 +58,11 @@
     "detail_files_unavailable": "File details are not available yet.",
     "detail_share": "Share",
     "detail_edit_unavailable": "Editing is not available yet",
-    "detail_share_unavailable": "Sharing is not available yet"
+    "detail_share_unavailable": "Sharing is not available yet",
+    "detail_reminder": "REMINDER",
+    "detail_remind_me": "Remind me",
+    "detail_reminder_days_before": {
+        "one": "{count} day before",
+        "other": "{count} days before"
+    }
 }
