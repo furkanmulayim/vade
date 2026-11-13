@@ -64,5 +64,16 @@
     "detail_reminder_days_before": {
         "one": "{count} Tag vorher",
         "other": "{count} Tage vorher"
+    },
+    "category_records": {
+        "one": "{count} Eintrag",
+        "other": "{count} Einträge"
+    },
+    "category_no_records": "Noch keine Einträge in dieser Kategorie.",
+    "category_next_due": "Nächste Fälligkeit",
+    "category_has_upcoming": "Anstehender Eintrag vorhanden!",
+    "category_upcoming": {
+        "one": "Bald fällig +{count}",
+        "other": "Bald fällig +{count}"
     }
 }

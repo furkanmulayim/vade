@@ -72,5 +72,16 @@
         "few": "За {count} дня",
         "many": "За {count} дней",
         "other": "За {count} дня"
+    },
+    "category_records": {
+        "one": "{count} запись",
+        "other": "{count} записей"
+    },
+    "category_no_records": "В этой категории пока нет записей.",
+    "category_next_due": "Ближайший срок",
+    "category_has_upcoming": "Есть предстоящая запись!",
+    "category_upcoming": {
+        "one": "Скоро +{count}",
+        "other": "Скоро +{count}"
     }
 }

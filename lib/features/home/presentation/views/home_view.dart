@@ -7,6 +7,7 @@ import '../../../../shared/constants/asset_path.dart';
 import '../../../../shared/constants/locale_keys.g.dart';
 import '../../../../shared/extensions/context_extension.dart';
 import '../../../../core/models/vade.dart';
+import '../../../../core/models/sample_records.dart';
 import '../../../../shared/widgets/custom_icon_widget.dart';
 import '../../../../shared/enums/category_enum.dart';
 import '../../../categories/presentation/widgets/category_tab_bar.dart';
@@ -31,7 +32,7 @@ class _HomeViewState extends State<HomeView> {
 
   @override
   Widget build(BuildContext context) {
-    final records = _filterRecords(_getSampleRecords());
+    final records = _filterRecords(getSampleRecords());
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -160,71 +161,5 @@ class _HomeViewState extends State<HomeView> {
       useSafeArea: true,
       builder: (_) => const CreateView(),
     );
-  }
-
-  // todo gerçek veriler gelince temizlenecek
-  List<Vade> _getSampleRecords() {
-    return [
-      Vade(
-        id: 'sample-1',
-        category: CategoryEnum.electronics,
-        iconPath: CategoryEnum.electronics.icon,
-        name: 'Özel Sağlık Sigortası',
-        description: 'Tamamlayıcı sağlık sigortası plan (A)',
-        startDate: DateTime(2026, 1, 1),
-        endDate: DateTime(2027, 5, 5),
-        documentCount: 0,
-      ),
-      Vade(
-        id: 'sample-2',
-        category: CategoryEnum.homeLiving,
-        iconPath: CategoryEnum.homeLiving.icon,
-        name: 'MacBook Air M2',
-        description: 'Kişisel edit yaptığım bilgisayarım',
-        startDate: DateTime(2026, 1, 1),
-        endDate: DateTime(2026, 11, 21),
-        documentCount: 2,
-      ),
-      Vade(
-        id: 'sample-3',
-        category: CategoryEnum.homeLiving,
-        iconPath: CategoryEnum.homeLiving.icon,
-        name: 'Hyundai Kasko',
-        description: 'Garanti bankası ile yapılan anlaşmalı sigorta',
-        startDate: DateTime(2026, 1, 1),
-        endDate: DateTime(2026, 10, 30),
-        documentCount: 0,
-      ),
-      Vade(
-        id: 'sample-4',
-        category: CategoryEnum.education,
-        iconPath: CategoryEnum.education.icon,
-        name: 'Hyundai Kasko',
-        description: 'Garanti bankası ile yapılan anlaşmalı sigorta',
-        startDate: DateTime(2026, 1, 1),
-        endDate: DateTime(2026, 10, 30),
-        documentCount: 0,
-      ),
-      Vade(
-        id: 'sample-4',
-        category: CategoryEnum.education,
-        iconPath: CategoryEnum.education.icon,
-        name: 'Hyundai Kasko',
-        description: 'Garanti bankası ile yapılan anlaşmalı sigorta',
-        startDate: DateTime(2026, 1, 1),
-        endDate: DateTime(2026, 10, 30),
-        documentCount: 0,
-      ),
-      Vade(
-        id: 'sample-4',
-        category: CategoryEnum.education,
-        iconPath: CategoryEnum.education.icon,
-        name: 'Hyundai Kasko',
-        description: 'Garanti bankası ile yapılan anlaşmalı sigorta',
-        startDate: DateTime(2026, 1, 1),
-        endDate: DateTime(2026, 10, 30),
-        documentCount: 0,
-      ),
-    ];
   }
 }

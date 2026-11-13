@@ -64,5 +64,16 @@
     "detail_reminder_days_before": {
         "one": "{count} jour avant",
         "other": "{count} jours avant"
+    },
+    "category_records": {
+        "one": "{count} enregistrement",
+        "other": "{count} enregistrements"
+    },
+    "category_no_records": "Aucun enregistrement dans cette catégorie.",
+    "category_next_due": "Prochaine échéance",
+    "category_has_upcoming": "Une échéance approche !",
+    "category_upcoming": {
+        "one": "À venir +{count}",
+        "other": "À venir +{count}"
     }
 }

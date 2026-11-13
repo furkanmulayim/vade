@@ -64,5 +64,16 @@
     "detail_reminder_days_before": {
         "one": "{count} day before",
         "other": "{count} days before"
+    },
+    "category_records": {
+        "one": "{count} record",
+        "other": "{count} records"
+    },
+    "category_no_records": "No records in this category yet.",
+    "category_next_due": "Next due date",
+    "category_has_upcoming": "Upcoming Record Available!",
+    "category_upcoming": {
+        "one": "Upcoming +{count}",
+        "other": "Upcoming +{count}"
     }
 }

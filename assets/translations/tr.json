@@ -64,5 +64,16 @@
     "detail_reminder_days_before": {
         "one": "{count} gün önce",
         "other": "{count} gün önce"
+    },
+    "category_records": {
+        "one": "{count} Kayıt",
+        "other": "{count} Kayıt"
+    },
+    "category_no_records": "Bu kategoride henüz kayıt yok.",
+    "category_next_due": "En yakın vade",
+    "category_has_upcoming": "Yaklaşan Kayıt Var!",
+    "category_upcoming": {
+        "one": "Yaklaşan +{count}",
+        "other": "Yaklaşan +{count}"
     }
 }
