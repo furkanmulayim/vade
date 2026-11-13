@@ -130,7 +130,7 @@ class DueCardWidget extends StatelessWidget {
             const VerticalDivider(width: 1),
             _buildDetailRow(
               context,
-              icon: AssetPath.navDocuments,
+              icon: AssetPath.documents,
               label: LocaleKeys.due_documents.plural(
                 vade.documentCount,
                 name: 'count',
