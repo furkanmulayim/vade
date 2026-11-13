@@ -1,5 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:provider/provider.dart';
 
 import '../core/di/injection.dart';
@@ -31,7 +31,14 @@ class _VadeAppState extends State<VadeApp> {
           (provider) => provider.themeMode,
         ),
         routerConfig: _appRouter.config(),
-        localizationsDelegates: context.localizationDelegates,
+        builder: (context, child) =>
+            // Required while blurred_overlay uses Flutter SDK Material widgets.
+            // ignore: deprecated_member_use
+            MaterialUiCompatibilityBridge(child: child!),
+        localizationsDelegates: [
+          ...GlobalMaterialLocalizations.delegates,
+          ...context.localizationDelegates,
+        ],
         supportedLocales: context.supportedLocales,
         locale: context.locale,
       ),

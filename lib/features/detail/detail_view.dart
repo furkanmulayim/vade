@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:blurred_overlay/blurred_overlay.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '../../core/models/due_date_status.dart';
 import '../../core/models/vade.dart';

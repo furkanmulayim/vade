@@ -1,6 +1,6 @@
 import 'package:blurred_overlay/blurred_overlay.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '../../../../shared/constants/asset_path.dart';
 import '../../../../shared/constants/locale_keys.g.dart';

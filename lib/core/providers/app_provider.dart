@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Uygulama geneline ait, feature bağımsız UI state'ini yönetir.
 class AppProvider extends ChangeNotifier {

@@ -1,5 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '../../../../shared/constants/locale_keys.g.dart';
 import '../../../../shared/widgets/custom_icon_widget.dart';
