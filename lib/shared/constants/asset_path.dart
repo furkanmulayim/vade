@@ -1,8 +1,13 @@
 abstract final class AssetPath {
+  static const _onboarding = 'assets/images/onboarding';
+
+  static const onboardingMoney = '$_onboarding/onboard_money.svg';
+  static const onboardingMaintenance = '$_onboarding/onboard_settings.svg';
+  static const onboardingBackground = '$_onboarding/onboard_back.svg';
+
   //Icons
   static const _icons = 'assets/images/icons_other';
 
-  static const search = '$_icons/search.svg';
   static const notification = '$_icons/notification.svg';
 
   static const _iconsSlim = 'assets/images/icons_slim';

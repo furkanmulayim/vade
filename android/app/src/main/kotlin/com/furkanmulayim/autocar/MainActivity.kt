@@ -1,4 +1,4 @@
-package com.furkanmulayim.vade
+package com.furkanmulayim.autocar
 
 import io.flutter.embedding.android.FlutterActivity
 

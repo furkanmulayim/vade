@@ -1,21 +1,19 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:provider/provider.dart';
 
 import '../core/di/injection.dart';
 import '../core/providers/app_provider.dart';
-import '../shared/constants/locale_keys.g.dart';
 import '../shared/theme/app_theme.dart';
 import 'router/app_router.dart';
 
-class VadeApp extends StatefulWidget {
-  const VadeApp({super.key});
+class AutocarApp extends StatefulWidget {
+  const AutocarApp({super.key});
 
   @override
-  State<VadeApp> createState() => _VadeAppState();
+  State<AutocarApp> createState() => _AutocarAppState();
 }
 
-class _VadeAppState extends State<VadeApp> {
+class _AutocarAppState extends State<AutocarApp> {
   final _appRouter = AppRouter();
 
   @override
@@ -23,7 +21,7 @@ class _VadeAppState extends State<VadeApp> {
     value: getIt<AppProvider>(),
     child: Builder(
       builder: (context) => MaterialApp.router(
-        title: LocaleKeys.name.tr(),
+        title: "Autocar",
         debugShowCheckedModeBanner: false,
         theme: AppTheme.light,
         darkTheme: AppTheme.dark,
@@ -35,12 +33,6 @@ class _VadeAppState extends State<VadeApp> {
             // Required while blurred_overlay uses Flutter SDK Material widgets.
             // ignore: deprecated_member_use
             MaterialUiCompatibilityBridge(child: child!),
-        localizationsDelegates: [
-          ...GlobalMaterialLocalizations.delegates,
-          ...context.localizationDelegates,
-        ],
-        supportedLocales: context.supportedLocales,
-        locale: context.locale,
       ),
     ),
   );

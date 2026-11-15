@@ -1,5 +1,4 @@
 import '../constants/asset_path.dart';
-import '../constants/locale_keys.g.dart';
 
 enum CategoryEnum {
   electronics('electronics'), // Elektronik
@@ -18,15 +17,14 @@ enum CategoryEnum {
 
 extension CategoryExtension on CategoryEnum {
   String get titleKey => switch (this) {
-    CategoryEnum.electronics => LocaleKeys.category_electronics,
-    CategoryEnum.vehicleAndTransport =>
-      LocaleKeys.category_vehicle_and_transport,
-    CategoryEnum.homeLiving => LocaleKeys.category_home_living,
-    CategoryEnum.health => LocaleKeys.category_health,
-    CategoryEnum.finance => LocaleKeys.category_finance,
-    CategoryEnum.subscriptions => LocaleKeys.category_subscriptions,
-    CategoryEnum.education => LocaleKeys.category_education,
-    CategoryEnum.other => LocaleKeys.category_other,
+    CategoryEnum.electronics => "Elektronik",
+    CategoryEnum.vehicleAndTransport => "Araç ve Ulaşım",
+    CategoryEnum.homeLiving => "Ev Yaşam",
+    CategoryEnum.health => "Sağlık",
+    CategoryEnum.finance => "Finans",
+    CategoryEnum.subscriptions => "Abonelikler",
+    CategoryEnum.education => "Eğitim",
+    CategoryEnum.other => "Diğer",
   };
 
   String get icon => switch (this) {

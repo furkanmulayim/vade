@@ -1,9 +1,7 @@
 import 'package:blurred_overlay/blurred_overlay.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../../../../shared/constants/asset_path.dart';
-import '../../../../shared/constants/locale_keys.g.dart';
 import '../../../../shared/extensions/context_extension.dart';
 import '../../../../shared/widgets/custom_icon_widget.dart';
 
@@ -11,13 +9,11 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({
     super.key,
     this.nameCode,
-    this.onSearch,
     this.onNotifications,
     this.bottom,
   });
 
   final String? nameCode;
-  final VoidCallback? onSearch;
   final VoidCallback? onNotifications;
   final PreferredSizeWidget? bottom;
 
@@ -33,13 +29,8 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       bottom: bottom,
       actions: [
         _buildAction(
-          iconPath: AssetPath.search,
-          tooltip: LocaleKeys.home_search.tr(),
-          onPressed: onSearch,
-        ),
-        _buildAction(
           iconPath: AssetPath.notification,
-          tooltip: LocaleKeys.home_notifications.tr(),
+          tooltip: "Bildirimler",
           onPressed: onNotifications,
         ),
         const SizedBox(width: 8),
@@ -71,10 +62,31 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   Widget _buildWelcome(BuildContext context) {
-    final date = DateFormat(
-      'd MMMM EEEE',
-      context.locale.toString(),
-    ).format(DateTime.now());
+    final now = DateTime.now();
+    const months = [
+      'Ocak',
+      'Şubat',
+      'Mart',
+      'Nisan',
+      'Mayıs',
+      'Haziran',
+      'Temmuz',
+      'Ağustos',
+      'Eylül',
+      'Ekim',
+      'Kasım',
+      'Aralık',
+    ];
+    const days = [
+      'Pazartesi',
+      'Salı',
+      'Çarşamba',
+      'Perşembe',
+      'Cuma',
+      'Cumartesi',
+      'Pazar',
+    ];
+    final date = '${now.day} ${months[now.month - 1]} ${days[now.weekday - 1]}';
 
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -82,7 +94,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       spacing: 2,
       children: [
         Text(
-          LocaleKeys.home_welcome.tr(),
+          "Autocar’a Hoşgeldin.",
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           style: context.typo.size18(),

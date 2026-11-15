@@ -1,29 +1,24 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../shared/constants/asset_path.dart';
-import '../../../../shared/constants/locale_keys.g.dart';
 import '../../../../shared/extensions/context_extension.dart';
 
 class MainBottomNavigation extends StatelessWidget {
   const MainBottomNavigation({
     required this.selectedIndex,
     required this.onSelected,
-    required this.onCreate,
     super.key,
   });
 
   final int selectedIndex;
   final ValueChanged<int> onSelected;
-  final VoidCallback onCreate;
 
   static const _items = [
-    (AssetPath.navHome, LocaleKeys.navigation_home),
-    (AssetPath.navCategories, LocaleKeys.navigation_categories),
-    (null, LocaleKeys.navigation_create),
-    (AssetPath.navDocuments, LocaleKeys.navigation_documents),
-    (AssetPath.navSettings, LocaleKeys.navigation_settings),
+    (AssetPath.navHome, 'Home'),
+    (AssetPath.navCategories, 'Masraf'),
+    (AssetPath.navDocuments, 'Bakım'),
+    (AssetPath.navSettings, 'Ayarlar'),
   ];
 
   @override
@@ -39,13 +34,12 @@ class MainBottomNavigation extends StatelessWidget {
         child: Row(
           children: List.generate(_items.length, (index) {
             final (icon, label) = _items[index];
-            final tabIndex = index > 2 ? index - 1 : index;
             return Expanded(
               child: _NavigationItem(
                 icon: icon,
-                label: label.tr(),
-                selected: icon != null && selectedIndex == tabIndex,
-                onTap: icon == null ? onCreate : () => onSelected(tabIndex),
+                label: label,
+                selected: selectedIndex == index,
+                onTap: () => onSelected(index),
               ),
             );
           }),
@@ -63,7 +57,7 @@ class _NavigationItem extends StatefulWidget {
     required this.onTap,
   });
 
-  final String? icon;
+  final String icon;
   final String label;
   final bool selected;
   final VoidCallback onTap;
@@ -109,51 +103,29 @@ class _NavigationItemState extends State<_NavigationItem>
           builder: (_, child) =>
               Transform.scale(scale: _scale.value, child: child),
           child: Center(
-            child: widget.icon == null
-                ? Container(
-                    width: 46,
-                    height: 46,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          Color.lerp(colors.primary, colors.onPrimary, 0.3)!,
-                          colors.primary,
-                        ],
-                      ),
-                    ),
-                    child: Icon(Icons.add, color: colors.onPrimary, size: 28),
-                  )
-                : Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      SvgPicture.asset(
-                        widget.icon!,
-                        width: 24,
-                        height: 24,
-                        colorFilter: ColorFilter.mode(
-                          iconColor,
-                          BlendMode.srcIn,
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        widget.label,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: context.typo.size12(
-                          color: widget.selected
-                              ? colors.primary
-                              : colors.textSecondary,
-                          weight: widget.selected
-                              ? FontWeight.w600
-                              : FontWeight.w500,
-                        ),
-                      ),
-                    ],
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SvgPicture.asset(
+                  widget.icon,
+                  width: 24,
+                  height: 24,
+                  colorFilter: ColorFilter.mode(iconColor, BlendMode.srcIn),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  widget.label,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: context.typo.size12(
+                    color: widget.selected
+                        ? colors.primary
+                        : colors.textSecondary,
+                    weight: widget.selected ? FontWeight.w600 : FontWeight.w500,
                   ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

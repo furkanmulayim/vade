@@ -1,7 +1,5 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:material_ui/material_ui.dart';
 
-import '../constants/locale_keys.g.dart';
 import '../extensions/context_extension.dart';
 import 'custom_button_widget.dart';
 
@@ -92,7 +90,7 @@ class CustomSheetWidget extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
                     child: CustomButtonWidget(
                       height: 42,
-                      text: buttonText ?? LocaleKeys.home_sort_apply.tr(),
+                      text: buttonText ?? "Uygula",
                       onPressed: onButtonPressed,
                       isDisabled: isButtonDisabled,
                     ),

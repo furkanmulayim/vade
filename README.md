@@ -1,6 +1,6 @@
-# Vade
+# Autocar
 
-Vade, **feature-based clean architecture** yaklaşımıyla geliştirilen bir Flutter uygulamasıdır.
+Autocar, **feature-based clean architecture** yaklaşımıyla geliştirilen bir Flutter uygulamasıdır.
 
 > 🚧 **Geliştirme aşamasında**
 >
@@ -12,7 +12,6 @@ Vade, **feature-based clean architecture** yaklaşımıyla geliştirilen bir Flu
 - **Clean Architecture** — Mimari yaklaşım
 - **AutoRoute** — Sayfa yönlendirme
 - **GetIt & Injectable** — Bağımlılık yönetimi
-- **Easy Localization** — Çoklu dil desteği
 - **Provider** — State management
 
 ## Başlangıç
@@ -28,12 +27,6 @@ Kod üretimi:
 
 ```bash
 dart run build_runner build --delete-conflicting-outputs
-```
-
-Çeviri dosyalarını üretme:
-
-```bash
-dart run easy_localization:generate -S assets/translations -O lib/shared/constants -o locale_keys.g.dart -f keys
 ```
 
 ## Test ve analiz
