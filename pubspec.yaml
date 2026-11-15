@@ -1,4 +1,4 @@
-name: vade
+name: autocar
 description: "Track warranties, subscriptions, and expiration dates with smart reminders."
 publish_to: 'none'
 version: 1.0.0+1
@@ -10,9 +10,13 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   auto_route: ^11.1.0
-  easy_localization: ^3.0.8
+  shared_preferences: ^2.5.5
   provider: ^6.1.5+1
   get_it: ^9.2.1
+  flutter_svg: ^2.3.0
+  blurred_overlay: ^1.3.1
+  material_ui: ^1.11.0
+  cupertino_ui: ^1.1.6
 
 dev_dependencies:
   flutter_test:
@@ -22,7 +26,21 @@ dev_dependencies:
   auto_route_generator: ^10.6.0
 
 flutter:
+  config:
+    enable-swift-package-manager: true
+
   uses-material-design: true
 
+  fonts:
+    - family: Urbanist
+      fonts:
+        - asset: assets/fonts/urbanist/Urbanist-Variable.ttf
+        - asset: assets/fonts/urbanist/Urbanist-Italic-Variable.ttf
+          style: italic
+
   assets:
-    - assets/translations/
+    - assets/images/onboarding/
+    - assets/images/icons_nav/
+    - assets/images/icons_other/
+    - assets/images/icons_slim/
+    - assets/images/icons_category/

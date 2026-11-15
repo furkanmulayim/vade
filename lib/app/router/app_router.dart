@@ -1,15 +1,32 @@
 import 'package:auto_route/auto_route.dart';
 
-import '../../features/home/presentation/pages/home_page.dart';
-import '../../features/splash/presentation/pages/splash_page.dart';
+import '../../features/home/presentation/views/home_view.dart';
+import '../../features/main/presentation/views/main_view.dart';
+import '../../features/notifications/notifications_view.dart';
+import '../../features/settings/settings_view.dart';
+import '../../features/splash/splash_view.dart';
+import '../../features/onboarding/onboarding_view.dart';
+
+import '../../features/expenses/expenses_view.dart';
+import '../../features/maintenance/maintenance_view.dart';
 
 part 'app_router.gr.dart';
 
-@AutoRouterConfig(replaceInRouteName: 'Page,Route')
+@AutoRouterConfig(replaceInRouteName: 'View,Route')
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
     AutoRoute(page: SplashRoute.page, initial: true),
-    AutoRoute(page: HomeRoute.page),
+    AutoRoute(page: OnboardingRoute.page),
+    AutoRoute(page: NotificationsRoute.page),
+    AutoRoute(
+      page: MainRoute.page,
+      children: [
+        AutoRoute(page: HomeRoute.page, initial: true),
+        AutoRoute(page: ExpensesRoute.page),
+        AutoRoute(page: MaintenanceRoute.page),
+        AutoRoute(page: SettingsRoute.page),
+      ],
+    ),
   ];
 }
