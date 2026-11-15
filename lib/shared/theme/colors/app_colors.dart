@@ -2,8 +2,10 @@ import 'package:material_ui/material_ui.dart';
 
 abstract final class AppColors {
   //Primary
-  static const primary = Color(0xFFFA7319);
-  static const onPrimary = Colors.white;
+  static const primaryLight = Color(0xFF18181B);
+  static const primaryDark = Color(0xFFF4F4F5);
+  static const onPrimaryLight = Color(0xFFFAFAFA);
+  static const onPrimaryDark = Color(0xFF18181B);
 
   //Surface
   static const surfaceLight = Color(0xFFF7F7F7);
@@ -20,8 +22,8 @@ abstract final class AppColors {
   static const textPrimaryLight = Color(0xFF202020);
   static const textPrimaryDark = Color(0xFFF9F9F9);
 
-  static const textSecondaryLight = Color(0xFF70747C);
-  static const textSecondaryDark = Color(0xFFA6A6A6);
+  static const textSecondaryLight = Color(0xFF85858D);
+  static const textSecondaryDark = Color(0xFFABABB3);
 
   //Border
   static const borderLight = Color(0xFFEFEFEF);
@@ -29,25 +31,4 @@ abstract final class AppColors {
 
   static const disabledLight = Color(0xFFB4B4B4);
   static const disabledDark = Color(0xFF4D4D4D);
-
-  //Relax
-  static const relaxLight = Color(0xFF3DAE2B);
-  static const relaxDark = Color(0xFF478C3C);
-
-  static const relaxBackLight = Color.fromARGB(255, 244, 253, 248);
-  static const relaxBackDark = Color(0xFF24352B);
-
-  //Upcoming
-  static const upcomingLight = Color(0xFFE5AD16);
-  static const upcomingDark = Color(0xFFE5B93F);
-
-  static const upcomingBackLight = Color.fromARGB(255, 255, 251, 243);
-  static const upcomingBackDark = Color(0xFF332D1F);
-
-  //Expired
-  static const expiredLight = Color(0xFFFB3748);
-  static const expiredDark = Color(0xFFD03D49);
-
-  static const expiredBackLight = Color.fromARGB(255, 255, 243, 243);
-  static const expiredBackDark = Color(0xFF392222);
 }

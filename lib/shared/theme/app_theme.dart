@@ -7,8 +7,8 @@ import 'widget_themes.dart';
 class AppTheme {
   static ThemeData get light {
     const colors = AppColorsExtension(
-      primary: AppColors.primary,
-      onPrimary: AppColors.onPrimary,
+      primary: AppColors.primaryLight,
+      onPrimary: AppColors.onPrimaryLight,
       surface: AppColors.surfaceLight,
       surfaceSheet: AppColors.surfaceSheetLight,
       card: AppColors.cardLight,
@@ -16,12 +16,6 @@ class AppTheme {
       textSecondary: AppColors.textSecondaryLight,
       border: AppColors.borderLight,
       disabled: AppColors.disabledLight,
-      relax: AppColors.relaxLight,
-      backRelax: AppColors.relaxBackLight,
-      upcoming: AppColors.upcomingLight,
-      backUpcoming: AppColors.upcomingBackLight,
-      expired: AppColors.expiredLight,
-      backExpired: AppColors.expiredBackLight,
     );
     final scheme =
         ColorScheme.fromSeed(
@@ -59,8 +53,8 @@ class AppTheme {
 
   static ThemeData get dark {
     const colors = AppColorsExtension(
-      primary: AppColors.primary,
-      onPrimary: AppColors.onPrimary,
+      primary: AppColors.primaryDark,
+      onPrimary: AppColors.onPrimaryDark,
       surface: AppColors.surfaceDark,
       surfaceSheet: AppColors.surfaceSheetDark,
       card: AppColors.cardDark,
@@ -68,12 +62,6 @@ class AppTheme {
       textSecondary: AppColors.textSecondaryDark,
       border: AppColors.borderDark,
       disabled: AppColors.disabledDark,
-      relax: AppColors.relaxDark,
-      backRelax: AppColors.relaxBackDark,
-      upcoming: AppColors.upcomingDark,
-      backUpcoming: AppColors.upcomingBackDark,
-      expired: AppColors.expiredDark,
-      backExpired: AppColors.expiredBackDark,
     );
     final scheme =
         ColorScheme.fromSeed(

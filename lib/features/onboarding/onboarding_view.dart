@@ -27,7 +27,7 @@ class _OnboardingViewState extends State<OnboardingView> {
       description: 'Tüm araç giderlerinizi tek yerde görün, harcamalarınızı net şekilde analiz edin.',
     ),
     (
-      icon: AssetPath.onboardingMaintenance,
+      icon: AssetPath.onboardingSettings,
       title: 'Bakımlarınızı Hiç\nAksatmayın',
       description: 'Parçalarınızın ömrünü, mevsim hazırlıkları, vergi, sigorta ve muayene süreçlerini detaylıca takip edin.',
     ),

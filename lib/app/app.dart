@@ -1,4 +1,8 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:flutter/services.dart';
+// Required to theme Flutter SDK widgets used by blurred_overlay.
+// ignore: deprecated_member_use
+import 'package:flutter/material.dart' as flutter;
 import 'package:provider/provider.dart';
 
 import '../core/di/injection.dart';
@@ -29,10 +33,28 @@ class _AutocarAppState extends State<AutocarApp> {
           (provider) => provider.themeMode,
         ),
         routerConfig: _appRouter.config(),
-        builder: (context, child) =>
-            // Required while blurred_overlay uses Flutter SDK Material widgets.
-            // ignore: deprecated_member_use
-            MaterialUiCompatibilityBridge(child: child!),
+        builder: (context, child) {
+          final overlayStyle = Theme.of(context).brightness == Brightness.dark
+              ? SystemUiOverlayStyle.light
+              : SystemUiOverlayStyle.dark;
+          return AnnotatedRegion<SystemUiOverlayStyle>(
+            value: overlayStyle,
+            child:
+                // Required while blurred_overlay uses Flutter SDK Material widgets.
+                // ignore: deprecated_member_use
+                MaterialUiCompatibilityBridge(
+                  child: Builder(
+                    builder: (context) => flutter.Theme(
+                      data: flutter.Theme.of(context).copyWith(
+                        appBarTheme: flutter.Theme.of(context).appBarTheme
+                            .copyWith(systemOverlayStyle: overlayStyle),
+                      ),
+                      child: child!,
+                    ),
+                  ),
+                ),
+          );
+        },
       ),
     ),
   );

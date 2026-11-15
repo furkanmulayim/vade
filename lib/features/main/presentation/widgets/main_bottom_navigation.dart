@@ -16,8 +16,8 @@ class MainBottomNavigation extends StatelessWidget {
 
   static const _items = [
     (AssetPath.navHome, 'Home'),
-    (AssetPath.navCategories, 'Masraf'),
-    (AssetPath.navDocuments, 'Bakım'),
+    (AssetPath.navSpend, 'Masraf'),
+    (AssetPath.navRepair, 'Bakım'),
     (AssetPath.navSettings, 'Ayarlar'),
   ];
 
@@ -83,8 +83,9 @@ class _NavigationItemState extends State<_NavigationItem>
 
   @override
   Widget build(BuildContext context) {
-    final colors = context.color;
-    final iconColor = widget.selected ? colors.primary : colors.textPrimary;
+    final selectedColor = widget.selected
+        ? context.color.textPrimary
+        : context.color.textSecondary;
 
     return Semantics(
       button: true,
@@ -110,7 +111,7 @@ class _NavigationItemState extends State<_NavigationItem>
                   widget.icon,
                   width: 24,
                   height: 24,
-                  colorFilter: ColorFilter.mode(iconColor, BlendMode.srcIn),
+                  colorFilter: ColorFilter.mode(selectedColor, BlendMode.srcIn),
                 ),
                 const SizedBox(height: 4),
                 Text(
@@ -118,9 +119,7 @@ class _NavigationItemState extends State<_NavigationItem>
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: context.typo.size12(
-                    color: widget.selected
-                        ? colors.primary
-                        : colors.textSecondary,
+                    color: selectedColor,
                     weight: widget.selected ? FontWeight.w600 : FontWeight.w500,
                   ),
                 ),

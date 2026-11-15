@@ -13,8 +13,8 @@ class MainView extends StatelessWidget {
     homeIndex: 0,
     routes: const [
       HomeRoute(),
-      ExpensesRoute(),
-      MaintenanceRoute(),
+      SpendRoute(),
+      RepairRoute(),
       SettingsRoute(),
     ],
     bottomNavigationBuilder: (context, tabsRouter) => MainBottomNavigation(
